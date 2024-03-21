@@ -87,7 +87,7 @@
     </section>
 
     <!-- Intoduction section -->
-    <section class="w-full my-36">
+    <section class="w-full mt-36">
       <BaseSection data-aos="fade-down">
         <div class="col-span-12 lg:col-span-7">
           <div class="w-full">
@@ -139,13 +139,13 @@
 
     <!-- Timer section -->
     <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl justify-center items-center px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/timer.png')" class="w-70" alt="" />
           </div>
         </div>
-        <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
+        <div data-aos="fade-left" class="col-span-10 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
           <h2 class="text-4xl font-semibold">Lorem Ipsum</h2>
           <ul class="space-y-8 sm:space-y-4">
             <LandingListItem title="Lorem ipsum">
