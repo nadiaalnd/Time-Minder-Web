@@ -1,5 +1,5 @@
 <template>
-  <nav id="navbar" :class="{ 'bg-white shadow-lg' : isScrolled }" class="relative z-10 w-full text-neutral-800 justify-between">
+  <nav :class="{ 'bg-white shadow-lg' : isScrolled }" class="relative z-10 w-full text-neutral-800 justify-between">
     <div class="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row py-2">
       <div class="flex flex-col lg:flex-row space-x-4 xl:space-x-2">
         <div class="w-full flex flex-row items-center justify-between py-2">
