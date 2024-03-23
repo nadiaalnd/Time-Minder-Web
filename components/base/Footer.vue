@@ -11,17 +11,15 @@
             </a>
           </div>
           <ul class="space-y-4">
-            <NavLink name="Lorem" url="#" />
-            <NavLink name="Lorem" url="#" />
-            <NavLink name="Lorem" url="#" />
-            <NavLink name="Lorem" url="#" />
+            <NavLink name="Products" url="#" />
+            <NavLink name="Testimonials" url="#" />
+            <NavLink name="Reviews" url="#" />
           </ul>
         </div>
         <div
           class="md:w-full lg:w-full lg:border-r w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t xl:border-r border-[#DDDDDD]"
         >
           <ul class="space-y-4">
-            <NavLink name="Products" url="#" />
             <NavLink name="About Us" url="#" />
             <NavLink name="Our Team" url="#" />
             <NavLink name="Blog" url="#" />
@@ -42,7 +40,7 @@
         >
           <h5 class="text-sm font-medium text-[#666666] focus:outline-none focus:shadow-outline">Newsletter</h5>
           <p class="text-sm text-[#666666] focus:outline-none focus:shadow-outline">
-            Lorem ipsum dolor <br class="sm:hidden" />sit amet
+            Dapatkan update terbaru dan promosi menarik langsung di inbox Anda.
           </p>
           <div class="flex items-center space-x-2">
             <input
