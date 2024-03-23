@@ -17,10 +17,10 @@
           :class="[open ? 'flex' : 'hidden lg:flex']"
           class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
         >
-          <NavLink name="Lorem" url="#" />
-          <NavLink name="Lorem" url="#" />
-          <NavLink name="Lorem" url="#" />
-          <NavLink name="Lorem" url="#" />
+          <NavLink name="Beranda" url="#" />
+          <NavLink name="Tentang" url="#" />
+          <NavLink name="Fitur" url="#" />
+          <NavLink name="Lainnya" url="#" />
         </ul>
       </div>
     </div>
