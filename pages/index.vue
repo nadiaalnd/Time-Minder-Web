@@ -99,7 +99,7 @@
         </div>
         <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
           <h2 class="text-4xl font-semibold">
-            Introducing <span class="text-time-gradient">Time </span><span class="text-minder-gradient">Minder</span><br>
+            Introducing <span class="text-time-gradient">Time </span><span class="text-minder-gradient">Minder</span>
             Focus and Productivity Apps
           </h2>
           <p class="paragraph">Solusi terbaik mengatur waktu Anda secara efektif!</p>
