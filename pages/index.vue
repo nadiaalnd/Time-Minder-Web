@@ -9,10 +9,11 @@
             data-aos-once="true"
             class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10"
           >
-            optimize your <span class="text-header-gradient">time  </span> With TimeMinder
+            Optimize Your Time with <br> <span class="text-time-gradient">Time </span>
+            <span class="text-minder-gradient">Minder</span>
           </h1>
           <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
-            TimeMinder memastikan Anda dapat tetap fokus dan terorganisir dalam menyelesaikan tugas-tugas Anda setiap hari.
+            Time Minder memastikan Anda dapat tetap fokus dan terorganisir dalam menyelesaikan tugas-tugas Anda setiap hari.
           </p>
           <div
             data-aos="fade-up"
@@ -71,18 +72,18 @@
     </section>
 
     <!-- About Time Minder -->
-    <section
+    <section id="about"
       class="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 lg:px-0 py-4 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
     >
       <div class="pl-12">
         <h2 class="text-4xl font-semibold">
-          About <span class="text-header-gradient">TimeMinder</span>
+          About <span class="text-time-gradient">Time </span> <span class="text-minder-gradient">Minder</span>
         </h2>
         <p data-aos="fade-up" class="paragraph text-center sm:text-left mr-10 mt-4 sm:mt-6">
-          TimeMinder adalah aplikasi yang didesain untuk membantu siapapun mengelola waktu mereka secara 
-          efisien guna meningkatkan produktivitas. Dengan antarmuka yang intuitif dan fitur yang dapat 
-          disesuaikan, TimeMinder memungkinkan pengguna untuk mengatur sesi kerja dan istirahat sesuai 
-          dengan preferensi individu mereka. 
+          Time Minder adalah aplikasi yang didesain untuk membantu siapapun mengelola waktu mereka secara
+          efisien guna meningkatkan produktivitas. Dengan antarmuka yang intuitif dan fitur yang dapat
+          disesuaikan, Time Minder memungkinkan pengguna untuk mengatur sesi kerja dan istirahat sesuai
+          dengan preferensi individu mereka.
         </p>
       </div>
     </section>
@@ -97,7 +98,8 @@
         </div>
         <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
           <h2 class="text-4xl font-semibold">
-            Introducing <span class="text-header-gradient">TimeMinder</span> Focus and Productivity Apps
+            Introducing <span class="text-time-gradient">Time </span><span class="text-minder-gradient">Minder</span><br>
+            Focus and Productivity Apps
           </h2>
           <p class="paragraph">Solusi terbaik mengatur waktu Anda secara efektif!</p>
           <ul class="space-y-4 sm:space-y-2">
@@ -109,31 +111,31 @@
       </BaseSection>
     </section>
 
-    <!-- Homepage section -->
-    <section class="bg-features relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
+    <!-- Introduction section -->
+    <section id="features" class="bg-features relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
       <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
         <LandingHomepageImage class="sm:hidden" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
-          <h2 class="text-4xl font-semibold">Our <span class="text-header-gradient">Features</span></h2>
+          <h2 class="text-4xl font-semibold">Our <span class="text-time-gradient">Features</span></h2>
           <div class="space-y-2">
-            <h4 class="text-lg font-medium">Aplikasi Mobile TimeMinder</h4>
+            <h4 class="text-lg font-medium">Add Your Own Custom Timer</h4>
             <p class="paragraph text-sm xl:text-base">
-              Fitur-fitur utama kami dirancang untuk memberikan pengalaman pengguna yang lebih baik dalam mengelola 
+              Kustomisasi waktu belajar dan istirahat secara fleksibel sesuai dengan preferensi masing-masing. Anda dapat menyesuaikan
+              durasi belajar dan istirahat, serta menetapkan interval antara sesi belajar dan istirahat sesuai dengan kebutuhan Anda.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-lg font-medium">Focus Timer</h4>
+            <p class="paragraph text-sm xl:text-base">
+              Fitur-fitur utama kami dirancang untuk memberikan pengalaman pengguna yang lebih baik dalam mengelola
               waktu dan meningkatkan produktivitas.
             </p>
           </div>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">List View Timer</h4>
             <p class="paragraph text-sm xl:text-base">
-              Dengan tampilan list yang terstruktur, Anda dapat dengan mudah mengawasi waktu yang Anda habiskan pada 
+              Dengan tampilan list yang terstruktur, Anda dapat dengan mudah mengawasi waktu yang Anda habiskan pada
               setiap tugas dan mengelola jadwal Anda dengan lebih efisien.
-            </p>
-          </div>
-          <div class="space-y-2">
-            <h4 class="text-lg font-medium">Add Your Own Timer</h4>
-            <p class="paragraph text-sm xl:text-base">
-              Kustomisasi waktu belajar dan istirahat secara fleksibel sesuai dengan preferensi masing-masing. Anda dapat menyesuaikan 
-              durasi belajar dan istirahat, serta menetapkan interval antara sesi belajar dan istirahat sesuai dengan kebutuhan Anda.
             </p>
           </div>
         </div>
@@ -154,20 +156,19 @@
           <ul class="space-y-8 sm:space-y-4">
             <LandingListItem title="Timer yang Dapat Disesuaikan">
               <p class="text-sm text-gray-700 leading-relaxed">
-                Atur timer pribadi untuk sesi kerja dan istirahat, memungkinkan Anda menyesuaikan jadwal Anda 
+                Atur timer pribadi untuk sesi kerja dan istirahat, memungkinkan Anda menyesuaikan jadwal Anda
                 sesuai dengan preferensi dan alur kerja Anda yang unik.
-                <!-- <span class="underline">Learn more</span> about our.... -->
               </p>
             </LandingListItem>
             <LandingListItem title="Fokus dan Produktivitas">
               <p class="text-sm text-gray-700 leading-relaxed">
-                Tetap fokus dan produktif sepanjang hari dengan antarmuka intuitif TimeMinder dan fitur-fitur 
+                Tetap fokus dan produktif sepanjang hari dengan antarmuka intuitif Time Minder dan fitur-fitur
                 canggih yang dirancang untuk meningkatkan produktivitas Anda.
               </p>
             </LandingListItem>
             <LandingListItem title="Kompatibilitas Antar-Platform">
               <p class="text-sm text-gray-700 leading-relaxed">
-                Akses Time Minder dengan lancar di berbagai perangkat dan platform, memastikan Anda tetap 
+                Akses Time Minder dengan lancar di berbagai perangkat dan platform, memastikan Anda tetap
                 terorganisir dan berada dalam jalur yang benar di mana pun Anda berada.
               </p>
             </LandingListItem>
@@ -180,7 +181,8 @@
     <section class="bg-features relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
         <h2 data-aos="flip-down" class="text-3xl sm:text-4xl font-semibold text-center">
-          Ayo Coba Time<span class="text-header-gradient">Minder</span> Sekarang!
+          Ayo Coba <span class="text-time-gradient">Time </span>
+          <span class="text-minder-gradient">Minder</span> Sekarang!
         </h2>
         <div
           data-aos="fade-up"
@@ -202,7 +204,7 @@
     </section>
 
     <!-- FAQ section -->
-    <section class="w-full my-24">
+    <section id="faq" class="w-full my-24">
       <BaseSection>
         <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
           <div class="w-full">
@@ -225,7 +227,7 @@
         v-smooth-scroll
         data-aos="flip-down"
         data-aos-delay="150"
-        href="#navbar"
+        href="#hero"
         class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
       >
         <span>Back to top</span>
@@ -292,9 +294,16 @@ export default {
 }
 </script>
 <style scoped>
-.text-header-gradient {
+.text-time-gradient {
   background: rgb(255, 191, 28);
   background: linear-gradient(169.4deg, #ffbf1c -6.01%, #ffb700 36.87%, #f8f097 78.04%, #ffbf1c 103.77%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-minder-gradient {
+  background: rgb(3, 10, 48);
+  background: linear-gradient(169.4deg, #030A30 -6.01%, #030A30 36.87%, #94caff 78.04%, #030A30 103.77%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

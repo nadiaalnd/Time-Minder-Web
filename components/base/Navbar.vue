@@ -17,32 +17,16 @@
           :class="[open ? 'flex' : 'hidden lg:flex']"
           class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
         >
-          <NavLink name="Beranda" url="#" />
-          <NavLink name="Tentang" url="#" />
-          <NavLink name="Fitur" url="#" />
-          <NavLink name="Lainnya" url="#" />
+          <NavLink name="Beranda" url="#home" />
+          <NavLink name="Tentang" url="#about" />
+          <NavLink name="Fitur" url="#features" />
+          <NavLink name="Bantuan" url="#faq" />
+          <NavLink name="Lainnya" url="#footer" />
         </ul>
       </div>
     </div>
   </nav>
 </template>
-
-<script>
-export default {
-  name: 'BaseNavbar',
-  data() {
-    return {
-      open: false,
-      dropdownNavbar: false,
-    }
-  },
-  methods: {
-    dropdownToggler () {
-      this.dropdownNavbar = !this.dropdownNavbar
-    }
-  }
-}
-</script>
 
 <script>
 export default {

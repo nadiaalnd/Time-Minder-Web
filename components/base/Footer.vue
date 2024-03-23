@@ -1,5 +1,5 @@
 <template>
-  <footer class="max-w-screen-xl px-8 mx-auto">
+  <footer id="footer" class="max-w-screen-xl px-8 mx-auto">
     <div class="w-full border-y border-[#DDDDDD]">
       <div class="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
         <div
@@ -29,7 +29,6 @@
           class="md:w-full md:border-t lg:w-full w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t-0 sm:border-r-0 border-[#DDDDDD]"
         >
           <ul class="space-y-4">
-            <NavLink name="Help Center" url="#" />
             <NavLink name="Contact Us" url="#" />
             <NavLink name="System Status" url="#" />
             <NavLink name="Privacy Policy" url="#" />
