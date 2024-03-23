@@ -60,7 +60,7 @@
           data-aos="fade-up"
           data-aos-delay="300"
           :src="require('~/assets/img/pattern/ellipse-3.png')"
-          class="hidden sm:block absolute bottom-56 right-24 w-6"
+          class="hidden sm:block absolute bottom-24 right-20 w-6"
         />
         <img
           data-aos="fade-up"
