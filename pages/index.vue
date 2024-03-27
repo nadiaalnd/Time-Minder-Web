@@ -24,7 +24,7 @@
             <BaseButton
               class="max-w-full px-8 py-4 bg-gradient-to-r from-[#FFBF1C] to-[#F8F097] text-white"
             >
-              Get Started
+              <a href="/timer">Get Started</a>
             </BaseButton>
             <BaseButton
               class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center"
@@ -94,7 +94,7 @@
       <BaseSection data-aos="fade-down">
         <div class="col-span-12 lg:col-span-7">
           <div class="w-full">
-            <img :src="require('assets/img/imagedummy.webp')" class="w-[95%]" alt="" />
+            <img :src="require('assets/img/hero.png')" class="w-[70%]" alt="" />
           </div>
         </div>
         <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
@@ -115,7 +115,7 @@
     <!-- Introduction section -->
     <section id="features" class="bg-features relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
       <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
-        <LandingHomepageImage class="sm:hidden" />
+        <HomepageImage class="sm:hidden" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
           <h2 class="text-4xl font-semibold">Our <span class="text-time-gradient">Features</span></h2>
           <div class="space-y-2">
@@ -140,7 +140,7 @@
             </p>
           </div>
         </div>
-        <LandingHomepageImage data-aos="fade-left" class="hidden sm:block" />
+        <HomepageImage data-aos="fade-left" class="hidden sm:block" />
       </div>
     </section>
 

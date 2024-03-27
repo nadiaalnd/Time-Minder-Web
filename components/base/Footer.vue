@@ -7,7 +7,7 @@
         >
           <div class="sm:hidden xl:block mb-6 sm:mb-0">
             <a href="#">
-              <img :src="require('~/assets/img/logo/TimeMinder.svg')" class="w-24 -mt-2" alt="Time Minder Logo" />
+              <img :src="require('~/assets/img/logo/TimeMinder.svg')" class="w-48 -mt-2" alt="Time Minder Logo" />
             </a>
           </div>
           <ul class="space-y-4">
