@@ -24,7 +24,7 @@
             <BaseButton
               class="max-w-full px-8 py-4 bg-gradient-to-r from-[#FFBF1C] to-[#F8F097] text-white"
             >
-              <a href="/timer">Get Started</a>
+              <NuxtLink href="/timer">Get Started</NuxtLink>
             </BaseButton>
             <BaseButton
               class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center"
