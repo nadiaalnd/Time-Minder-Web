@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero section -->
-    <h1>Halo</h1>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque beatae exercitationem facilis impedit, ipsum laborum, necessitatibus optio quisquam saepe similique sunt velit voluptatibus? Facere itaque nobis numquam ut voluptatem!</h1>
   </div>
 </template>
 
@@ -10,6 +10,7 @@ import aosMixin from '@/mixins/aos'
 export default {
   name: 'TimerPage',
   mixins: [aosMixin],
+  layout: 'custom',
 }
 </script>
 <style scoped>

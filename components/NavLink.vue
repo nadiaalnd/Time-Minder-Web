@@ -1,13 +1,14 @@
 <template>
   <li class="w-full">
-    <a
+    <NuxtLink
       class="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline"
-      :href="url"
+      :to="url"
     >
-      {{ name }}
-    </a>
+      <a @click.prevent="scrollToElement">{{ name }}</a>
+    </NuxtLink>
   </li>
 </template>
+
 <script>
 export default {
   props: {
@@ -20,5 +21,23 @@ export default {
       required: true,
     },
   },
+  methods: {
+    scrollToElement() {
+      const targetElement = document.getElementById(this.url.substring(1));
+      if (targetElement) {
+        let headerOffset = 100;
+        if(targetElement.id === 'faq') {
+          headerOffset = -50;
+        }
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }
 }
 </script>
