@@ -15,8 +15,7 @@
               <span class="text-minder-gradient">Minder</span>
             </h1>
             <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
-              Time Minder memastikan Anda dapat tetap fokus dan terorganisir dalam menyelesaikan tugas-tugas Anda setiap
-              hari.
+              Time Minder membantu kamu agar bisa lebih fokus dan teratur dalam menyelesaikan seluruh tugasmu setiap hari.
             </p>
             <div
               data-aos="fade-up"
@@ -88,18 +87,19 @@
           <p data-aos="fade-up" class="paragraph text-center sm:text-left mr-10 mt-4 sm:mt-6">
             Time Minder adalah aplikasi yang didesain untuk membantu siapapun mengelola waktu mereka secara efisien guna
             meningkatkan produktivitas. Dengan antarmuka yang intuitif dan fitur yang dapat disesuaikan, Time Minder
-            memungkinkan pengguna untuk mengatur sesi kerja dan istirahat sesuai dengan preferensi individu mereka.
+            memungkinkan pengguna untuk mengatur sesi kerja dan istirahat sesuai dengan preferensi mereka.
           </p>
         </div>
       </section>
     </section>
+
     <section class="bg-white">
       <!-- Intoduction section -->
       <section class="w-full">
-        <BaseSection data-aos="fade-down">
-          <div class="col-span-12 lg:col-span-7">
+        <BaseSection data-aos="fade-down" >
+          <div class=" col-span-12 lg:col-span-7">
             <div class="w-full">
-              <img :src="require('assets/img/hero.png')" class="w-[70%]" alt="" />
+              <img :src="require('assets/img/hero.png')" class="w-50" alt="" />
             </div>
           </div>
           <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
@@ -107,7 +107,7 @@
               Introducing <span class="text-time-gradient">Time </span><span class="text-minder-gradient">Minder</span>
               Focus and Productivity Apps
             </h2>
-            <p class="paragraph">Solusi terbaik mengatur waktu Anda secara efektif!</p>
+            <p class="paragraph">Solusi terbaik untuk mengatur waktumu secara efektif!</p>
             <ul class="space-y-4 sm:space-y-2">
               <LandingListItem title="Costumizable Timer" />
               <LandingListItem title="Intuitive Interface" />
@@ -117,7 +117,7 @@
         </BaseSection>
       </section>
 
-      <!-- Intro section -->
+      <!-- Introduction section -->
       <section
         id="features"
         class="bg-features relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden"
@@ -129,9 +129,9 @@
             <div class="space-y-2">
               <h4 class="text-lg font-medium">Add Your Own Custom Timer</h4>
               <p class="paragraph text-sm xl:text-base">
-                Kustomisasi waktu belajar dan istirahat secara fleksibel sesuai dengan preferensi masing-masing. Anda
-                dapat menyesuaikan durasi belajar dan istirahat, serta menetapkan interval antara sesi belajar dan
-                istirahat sesuai dengan kebutuhan Anda.
+                Kustomisasi waktu belajar dan istirahat secara fleksibel sesuai dengan preferensi masing-masing. Kamu
+                dapat menyesuaikan durasi fokus dan istirahat, serta menetapkan interval antara sesi fokus dan
+                istirahat sesuai dengan kebutuhanmu.
               </p>
             </div>
             <div class="space-y-2">
@@ -144,8 +144,8 @@
             <div class="space-y-2">
               <h4 class="text-lg font-medium">List View Timer</h4>
               <p class="paragraph text-sm xl:text-base">
-                Dengan tampilan list yang terstruktur, Anda dapat dengan mudah mengawasi waktu yang Anda habiskan pada
-                setiap tugas dan mengelola jadwal Anda dengan lebih efisien.
+                Dengan tampilan list yang terstruktur, kamu dapat dengan mudah mengawasi waktu yang kamu habiskan pada
+                setiap tugas dan mengelola jadwalmu dengan lebih efisien.
               </p>
             </div>
           </div>
@@ -166,20 +166,20 @@
             <ul class="space-y-8 sm:space-y-4">
               <LandingListItem title="Timer yang Dapat Disesuaikan">
                 <p class="text-sm text-gray-700 leading-relaxed">
-                  Atur timer pribadi untuk sesi kerja dan istirahat, memungkinkan Anda menyesuaikan jadwal Anda sesuai
-                  dengan preferensi dan alur kerja Anda yang unik.
+                  Atur timer pribadi untuk sesi kerja dan istirahat, memungkinkan untuk menyesuaikan jadwalmu sesuai
+                  dengan preferensi dan alur kerja kamu yang unik.
                 </p>
               </LandingListItem>
               <LandingListItem title="Fokus dan Produktivitas">
                 <p class="text-sm text-gray-700 leading-relaxed">
                   Tetap fokus dan produktif sepanjang hari dengan antarmuka intuitif Time Minder dan fitur-fitur canggih
-                  yang dirancang untuk meningkatkan produktivitas Anda.
+                  yang dirancang untuk meningkatkan produktivitasmu.
                 </p>
               </LandingListItem>
               <LandingListItem title="Kompatibilitas Antar-Platform">
                 <p class="text-sm text-gray-700 leading-relaxed">
-                  Akses Time Minder dengan lancar di berbagai perangkat dan platform, memastikan Anda tetap terorganisir
-                  dan berada dalam jalur yang benar di mana pun Anda berada.
+                  Akses Time Minder dengan lancar di berbagai perangkat dan platform, memastikanmu tetap terorganisir
+                  dan berada dalam jalur yang benar di mana pun kamu berada.
                 </p>
               </LandingListItem>
             </ul>
@@ -214,17 +214,16 @@
       </section>
 
       <!-- FAQ section -->
-      <section id="faq" class="w-full my-24">
+      <section id="faq" class="w-full">
         <BaseSection>
           <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
             <div class="w-full">
-              <img :src="require('~/assets/img/cat_hello.svg')" class="w-full" alt="" />
+              <img :src="require('~/assets/img/cat_hello.svg')" class="w-70" alt="" />
             </div>
           </div>
           <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
             <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
             <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
-
             <ul class="shadow-box">
               <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
             </ul>
@@ -264,22 +263,22 @@ export default {
         {
           title: 'Apa itu Time Minder?',
           description:
-            'Time Minder adalah sebuah aplikasi timer yang dirancang khusus untuk membantu Anda meningkatkan fokus dan produktivitas Anda. Dengan fitur-fitur kustomisasi untuk istirahat, Time Minder membantu Anda mengatur waktu kerja dan istirahat Anda secara optimal, sehingga Anda dapat bekerja dengan lebih efisien.',
+            'Time Minder adalah sebuah aplikasi timer yang dirancang khusus untuk membantu kamu meningkatkan fokus dan produktivitasmu. Dengan fitur-fitur kustomisasi untuk istirahat, Time Minder membantu kamu mengatur waktu kerja dan istirahat secara optimal, sehingga kamu dapat bekerja dengan lebih efisien.',
         },
         {
           title: 'Apa saja fitur utama yang ditawarkan oleh Time Minder?',
           description:
-            'Time Minder menawarkan fitur utama berupa timer kustomisasi yang memungkinkan Anda mengatur periode kerja dan istirahat sesuai kebutuhan Anda. Anda dapat menyesuaikan durasi istirahat, mengatur interval antara periode kerja dan istirahat, serta menentukan jumlah siklus kerja-istirahat yang diinginkan.',
+            'Time Minder menawarkan fitur utama berupa timer kustomisasi yang memungkinkan kamu mengatur periode kerja dan istirahat sesuai kebutuhanmu. Kamu dapat menyesuaikan durasi istirahat, mengatur interval antara periode kerja dan istirahat, serta menentukan jumlah siklus kerja-istirahat yang diinginkan.',
         },
         {
           title: 'Mengapa saya harus menggunakan Time Minder daripada aplikasi timer lainnya?',
           description:
-            'Time Minder dirancang khusus untuk membantu Anda meningkatkan fokus dan produktivitas dengan pendekatan yang terbukti efektif. Dengan fitur-fitur kustomisasi untuk istirahat, Time Minder memungkinkan Anda mengatur pola kerja yang sesuai dengan ritme dan preferensi Anda, sehingga Anda dapat tetap fokus dan terorganisir sepanjang hari.',
+            'Time Minder dirancang khusus untuk membantu kamu meningkatkan fokus dan produktivitas dengan pendekatan yang terbukti efektif. Dengan fitur-fitur kustomisasi untuk istirahat, Time Minder memungkinkan kamu untuk mengatur pola kerja yang sesuai dengan ritme dan preferensimu, sehingga dapat tetap fokus dan terorganisir sepanjang hari.',
         },
         {
           title: 'Bagaimana Time Minder dapat membantu saya secara konkret?',
           description:
-            'Time Minder membantu meningkatkan produktivitas dengan memberikan kontrol yang lebih besar atas waktu kerja dan istirahat Anda. Dengan fitur yang memungkinkan pengaturan timer yang dapat digunakan kembali, Anda dapat mengatur pola kerja Anda sekali dan menggunakannya berkali-kali tanpa perlu menambahkannya lagi. Hal ini membantu Anda tetap fokus dan terorganisir, sehingga dapat mencapai hasil yang lebih baik dalam waktu yang lebih singkat.',
+            'Time Minder membantu meningkatkan produktivitas dengan memberikan kontrol yang lebih besar atas waktu kerja dan istirahat. Dengan fitur yang memungkinkan pengaturan timer yang dapat digunakan kembali, kamu dapat mengatur pola kerjamu sekali dan menggunakannya berkali-kali tanpa perlu menambahkannya lagi. Hal ini membantumu tetap fokus dan terorganisir, sehingga dapat mencapai hasil yang lebih baik dalam waktu yang lebih singkat.',
         },
       ],
       steps: [
@@ -287,19 +286,19 @@ export default {
           img: 'cat_pencil.svg',
           title: 'Tambahkan Kegiatan dan Waktu',
           description:
-            'Tambahkan kegiatan Anda dan atur waktu yang diperlukan untuk setiap kegiatan secara mudah dan cepat.',
+            'Tambahkan kegiatanmu dan atur waktu yang diperlukan untuk setiap kegiatan secara mudah dan cepat.',
         },
         {
           img: 'cat_setting.svg',
           title: 'Atur Kustom Waktu Jeda dan Jumlah Istirahat',
           description:
-            'Atur waktu jeda antara sesi kerja dan istirahat Anda sesuai preferensi Anda, serta tentukan jumlah istirahat yang diinginkan.',
+            'Atur waktu jeda antara sesi kerja dan istirahat sesuai preferensi kamu, serta tentukan jumlah istirahat yang diinginkan.',
         },
         {
           img: 'cat_clock.svg',
           title: 'Gunakan Timer',
           description:
-            'Mulai menggunakan timer untuk mengatur waktu kerja dan istirahat Anda dengan lebih teratur dan efisien.',
+            'Mulai menggunakan timer untuk mengatur waktu kerja dan istirahatmu dengan lebih teratur dan efisien.',
         },
       ],
     }
