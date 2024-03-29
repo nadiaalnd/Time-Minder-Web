@@ -1,20 +1,17 @@
 <template>
   <div class="min-h-screen font-sans antialiased relative">
     <div class="relative">
-      <div
-        class="absolute top-0 left-0 w-full h-[125vh] sm:h-[215vh] lg:h-[100vh] cover-gradient-2 sm:cover-gradient"
-      ></div>
-      <BaseNavbar class="sticky top-0 z-10" />
-
-      <main class="text-neutral-800 mt-20">
-        <Nuxt />
-      </main>
+      <div class="absolute w-full cover-gradient-2 sm:cover-gradient">
+        <BaseNavbar class="sticky top-0 z-10" />
+        <main class="text-neutral-800">
+          <Nuxt />
+        </main>
+      </div>
 
       <BaseFooter />
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -43,7 +40,7 @@ export default {
 }
 .bg-orange-gradient,
 .text-gradient {
-  background: linear-gradient(136.91deg, #e7bc57 -12.5%, #FFBF1C 107.5%);
+  background: linear-gradient(136.91deg, #e7bc57 -12.5%, #ffbf1c 107.5%);
 }
 .text-gradient {
   -webkit-background-clip: text;
