@@ -6,9 +6,8 @@
         <main class="text-neutral-800">
           <Nuxt />
         </main>
+        <BaseFooter />
       </div>
-
-      <BaseFooter />
     </div>
   </div>
 </template>
