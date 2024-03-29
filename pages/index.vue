@@ -112,7 +112,7 @@
       </BaseSection>
     </section>
 
-    <!-- Introduction section -->
+    <!-- Intro section -->
     <section id="features" class="bg-features relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
       <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
         <HomepageImage class="sm:hidden" />
