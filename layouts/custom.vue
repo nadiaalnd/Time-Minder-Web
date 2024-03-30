@@ -6,7 +6,6 @@
         <main class="text-neutral-800 bg-white">
           <Nuxt/>
         </main>
-        <BaseFooter/>
       </div>
     </div>
   </div>
