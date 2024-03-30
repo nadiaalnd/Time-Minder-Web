@@ -325,7 +325,4 @@ export default {
   background-size: cover;
   background-position: center;
 }
-.max-h-0 {
-  max-height: 0;
-}
 </style>

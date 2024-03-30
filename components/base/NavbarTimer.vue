@@ -4,7 +4,7 @@
       <div class="flex flex-col lg:flex-row space-x-4 xl:space-x-2">
         <div class="w-full flex flex-row items-center justify-between py-2">
           <div>
-            <img :src="require('~/assets/img/logo/TimeMinder.svg')" class="w-32" alt="Time Minder Logo" />
+            <h2 class="font-bold">Get <span class="text-time-gradient">Time </span><span class="text-minder-gradient">Minder</span> Mobile Apps!</h2>
           </div>
           <button class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
             <SegmentIcon v-if="!open" :size="24" />
@@ -17,11 +17,8 @@
           :class="[open ? 'flex' : 'hidden lg:flex']"
           class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
         >
-          <NavLink name="Home" url="#hero" />
-          <NavLink name="About" url="#about" />
-          <NavLink name="Features" url="#features" />
-          <NavLink name="FAQ" url="#faq" />
-          <NavLink name="More" url="#footer" />
+          <NavLink name="Download" url="#" />
+          <NavLink name="More Info" url="#footer" />
         </ul>
       </div>
     </div>
@@ -30,7 +27,7 @@
 
 <script>
 export default {
-  name: 'BaseNavbar',
+  name: 'BaseNavbarTimer',
   data() {
     return {
       open: false,
@@ -58,3 +55,18 @@ export default {
   }
 }
 </script>
+<style scoped>
+.text-time-gradient {
+  background: rgb(255, 191, 28);
+  background: linear-gradient(169.4deg, #ffbf1c -6.01%, #ffb700 36.87%, #f8f097 78.04%, #ffbf1c 103.77%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-minder-gradient {
+  background: rgb(3, 10, 48);
+  background: linear-gradient(169.4deg, #030a30 -6.01%, #030a30 36.87%, #94caff 78.04%, #030a30 103.77%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>

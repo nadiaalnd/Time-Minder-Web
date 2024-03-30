@@ -2,6 +2,7 @@
   <div class="min-h-screen font-sans antialiased relative">
     <div class="relative">
       <div class="absolute w-full cover-gradient-2 sm:cover-gradient">
+        <BaseNavbarTimer/>
         <main class="text-neutral-800 bg-white">
           <Nuxt/>
         </main>
@@ -12,8 +13,12 @@
 </template>
 
 <script>
+import BaseNavbarTimer from '~/components/base/NavbarTimer.vue'
 export default {
   name: 'CustomLayout',
+  components: {
+    BaseNavbarTimer,
+  },
 }
 </script>
 
