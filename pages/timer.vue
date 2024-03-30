@@ -1,14 +1,14 @@
 <template>
-  <div class="w-full mx-auto">
-    <section class="relative justify-center items-center px-8 mx-auto ">
+  <section class="w-full">
+    <div class="relative justify-center items-center px-8 mx-auto ">
       <div class="py-8">
         <TimerProgressBar/>
         <div class="pt-8">
           <TimerView/>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>
