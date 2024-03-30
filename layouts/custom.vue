@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen font-sans antialiased relative">
     <div class="relative">
-      <div class="absolute w-full cover-gradient-2 sm:cover-gradient">
+      <div class="w-full cover-gradient-2 sm:cover-gradient">
         <BaseNavbarTimer/>
         <main class="text-neutral-800 bg-white">
           <Nuxt/>

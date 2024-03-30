@@ -1,14 +1,20 @@
 <template>
   <div class="justify-center max-w-xl">
     <div class="relative h-2 bg-neutral-200 rounded-full">
-      <div class="absolute top-0 left-0 h-2 rounded-full gradient-bg" style="width: 50%"></div>
+      <div class="absolute top-0 left-0 h-2 rounded-full gradient-bg" :style="{ width: percentages + '%' }"></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TimerProgressBar'
+  name: 'TimerProgressBar',
+  props: {
+    percentages: {
+      type: Number,
+      default: 0,
+    },
+  }
 }
 </script>
 

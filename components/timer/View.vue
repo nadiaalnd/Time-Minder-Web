@@ -1,11 +1,24 @@
 <template>
   <div class="container mx-auto mt-4">
-    <div class="max-w-sm mx-auto">
-      <div class="bg-features relative p-4 shadow rounded-2xl overflow-hidden">
+    <div class="w-screen max-w-lg mx-auto">
+      <div class="bg-features relative p-4 shadow-lg rounded-lg">
         <div class="text-center mb-4">
-          <h2 class="text-lg font-bold">Ini Nanti Pilihan</h2>
+          <h2 class="text-lg font-bold">Pomodoro Timer</h2>
         </div>
-        <div v-if="timerStarted" class="text-4xl text-center mb-4">{{ timer }}</div>
+        <div class="mb-4 flex justify-center">
+          <button
+            v-for="type in timerTypes"
+            :key="type"
+            :class="{ 'bg-gradient-to-r from-yellow-500 to-yellow-300': timerType === type, 'bg-gradient-to-r from-gray-500 to-gray-300': timerType !== type }"
+            class="mr-4 px-4 py-2 rounded-md text-white hover:shadow-md transition duration-300"
+            @click="setTimer(type)"
+          >
+            {{ type === 'short' ? 'Short Break' : 'Long Break' }}
+          </button>
+        </div>
+        <!-- Tampilan timer -->
+        <div class="text-4xl text-center mb-4">{{ timer }}</div>
+        <!-- Tombol untuk mengendalikan timer -->
         <div class="mb-4">
           <TimerButton
             v-if="!timerStarted"
@@ -21,8 +34,14 @@
     </div>
   </div>
 </template>
+
+
 <script>
 import TimerButton from '~/components/timer/Button.vue';
+import Timer from "@/plugins/timer";
+import {
+  sendNotification
+} from "@/plugins/sendNotification";
 
 export default {
   name: 'TimerView',
@@ -32,56 +51,92 @@ export default {
   data() {
     return {
       timerStarted: false,
-      timer: '00:00:00',
-      intervalId: null,
-      startTime: null,
-      elapsedTime: 0
+      timer: "00:00:00",
+      countdown: null,
+      progress: 0,
+      timerType: 'short',
+      timerTypes: ['short', 'long'],
+      isPaused: false
     };
+  },
+  created() {
+    this.timer = this.formatTime(this.timerType === 'short' ? 5 * 60 : 15 * 60);
   },
   methods: {
     startTimer() {
-      if (!this.timerStarted) {
-        this.timerStarted = true;
-        this.startTime = Date.now() - this.elapsedTime;
-        this.intervalId = setInterval(this.updateTimer, 1000);
+      if(this.isPaused) {
+        this.continueTimer();
+        this.isPaused = false;
+        return;
       }
+      const duration = this.timerType === 'short' ? 5 * 60 : 15 * 60;
+      this.timer = this.formatTime(duration);
+      this.countdown = Timer(duration, this.finishTimer.bind(this));
+      this.countdown.start();
+      this.timerStarted = true;
+      this.updateTimer();
+      this.$emit('startTimer');
+    },
+    continueTimer() {
+      this.countdown.start();
+      this.timerStarted = true;
+      this.updateTimer();
     },
     pauseTimer() {
-      if (this.timerStarted) {
-        clearInterval(this.intervalId);
-        this.timerStarted = false;
+      if (this.countdown) {
+        this.countdown.stop();
       }
-    },
-    finishTimer() {
-      clearInterval(this.intervalId);
       this.timerStarted = false;
-      this.elapsedTime = 0;
-      this.timer = '00:00:00';
+      this.isPaused = true;
+    },
+
+    finishTimer() {
+      this.timerStarted = false;
+      this.countdown = null;
+      this.timer = this.formatTime(this.timerType === 'short' ? 5 * 60 : 15 * 60);
+      this.$emit('finishTimer');
+      this.runSendNotification();
+    },
+    runSendNotification() {
+      sendNotification("Time's up!", {
+        body: `Your ${this.timerType === 'short' ? 'short break' : 'long break'} is over!`
+      });
     },
     updateTimer() {
-      if (this.timerStarted) {
-        const now = Date.now();
-        this.elapsedTime = now - this.startTime;
-        const formattedTime = this.formatTime(this.elapsedTime);
-        this.timer = formattedTime;
-      }
+      setInterval(() => {
+        if (this.countdown) {
+          const seconds = this.countdown.duration % 60;
+          const minutes = Math.floor((this.countdown.duration / 60) % 60);
+          const hours = Math.floor(this.countdown.duration / 3600);
+          this.timer = `${this.pad(hours)}:${this.pad(minutes)}:${this.pad(seconds)}`;
+          this.progress = parseFloat((this.countdown.duration / (this.timerType === 'short' ? 5 * 60 : 15 * 60) * 100).toFixed(2));
+          // eslint-disable-next-line no-console
+          console.log("progress", this.progress);
+          this.$emit('progress', this.progress);
+        }
+      }, 1000);
     },
-    formatTime(ms) {
-      const totalSeconds = Math.floor(ms / 1000);
-      const hours = Math.floor(totalSeconds / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
-      return `${this.pad(hours)}:${this.pad(minutes)}:${this.pad(seconds)}`;
+    formatTime(seconds) {
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const remainingSeconds = seconds % 60;
+      return `${this.pad(hours)}:${this.pad(minutes)}:${this.pad(remainingSeconds)}`;
     },
-    pad(number) {
-      if (number < 10) {
-        return '0' + number;
+    pad(num) {
+      return num.toString().padStart(2, '0');
+    },
+    setTimer(type) {
+      if(this.timerStarted) {
+        this.finishTimer();
       }
-      return number;
+      this.timerType = type;
+      const duration = this.timerType === 'short' ? 5 * 60 : 15 * 60;
+      this.timer = this.formatTime(duration);
     }
   }
 }
 </script>
+
 <style scoped>
 .bg-features {
   background: url('assets/img/bg-section.webp');
