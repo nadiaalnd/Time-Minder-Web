@@ -70,10 +70,9 @@
           />
         </BaseSection>
       </section>
-
-      <!-- About Time Minder -->
     </section>
 
+    <!-- About Time Minder -->
     <section class="relative pb-32 flex flex-col justify-center items-center">
       <div class="bg-white absolute h-[70%] w-full bottom-0"></div>
       <section

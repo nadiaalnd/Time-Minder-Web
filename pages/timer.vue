@@ -1,13 +1,15 @@
-<!-- TimerPage.vue -->
 <template>
-  <section class="w-full h-full flex justify-center items-center min-w-screen">
-      <div class="py-8">
-        <TimerProgressBar :percentages="percentages"/>
-        <div class="pt-8">
+  <div class="w-full mx-auto">
+    <section class="sm:mx-4 flex justify-center items-center">
+      <div class="max-w-full py-8 sm:px-4">
+        <TimerProgressBar :percentages="percentages"
+        class="sm:mx-auto px-4 sm:px-6 pb-2 sm:py-8"/>
+        <div class="sm:mx-auto sm:px-6">
           <TimerView @progress="handleProgress" @finishTimer="handleFinish"/>
         </div>
       </div>
-  </section>
+    </section>
+  </div>
 </template>
 <script>
 import aosMixin from '@/mixins/aos'

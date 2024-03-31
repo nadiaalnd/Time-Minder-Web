@@ -1,10 +1,7 @@
 <template>
-  <div class="container mx-auto mt-4">
+  <div class="w-full mx-auto">
     <div class="w-screen max-w-lg mx-auto">
-      <div class="bg-features relative p-4 shadow-lg rounded-lg">
-        <div class="text-center mb-4">
-          <h2 class="text-lg font-bold">Pomodoro Timer</h2>
-        </div>
+      <div class="bg-features relative p-8 shadow-lg rounded-lg">
         <div class="mb-4 flex justify-center">
           <button
             v-for="type in timerTypes"
@@ -16,10 +13,10 @@
             {{ type === 'short' ? 'Short Break' : 'Long Break' }}
           </button>
         </div>
-        <!-- Tampilan timer -->
-        <div class="text-4xl text-center mb-4">{{ timer }}</div>
-        <!-- Tombol untuk mengendalikan timer -->
-        <div class="mb-4">
+        <!-- Timer -->
+        <div class="text-8xl font-bold text-center mb-4">{{ timer }}</div>
+        <!-- Button -->
+        <div class="mb-4 flex justify-center">
           <TimerButton
             v-if="!timerStarted"
             @startTimer="startTimer"
@@ -51,7 +48,7 @@ export default {
   data() {
     return {
       timerStarted: false,
-      timer: "00:00:00",
+      timer: "00:00",
       countdown: null,
       progress: 0,
       timerType: 'short',
@@ -107,8 +104,7 @@ export default {
         if (this.countdown) {
           const seconds = this.countdown.duration % 60;
           const minutes = Math.floor((this.countdown.duration / 60) % 60);
-          const hours = Math.floor(this.countdown.duration / 3600);
-          this.timer = `${this.pad(hours)}:${this.pad(minutes)}:${this.pad(seconds)}`;
+          this.timer = `${this.pad(minutes)}:${this.pad(seconds)}`;
           this.progress = parseFloat((this.countdown.duration / (this.timerType === 'short' ? 5 * 60 : 15 * 60) * 100).toFixed(2));
           // eslint-disable-next-line no-console
           console.log("progress", this.progress);
@@ -117,10 +113,9 @@ export default {
       }, 1000);
     },
     formatTime(seconds) {
-      const hours = Math.floor(seconds / 3600);
       const minutes = Math.floor((seconds % 3600) / 60);
       const remainingSeconds = seconds % 60;
-      return `${this.pad(hours)}:${this.pad(minutes)}:${this.pad(remainingSeconds)}`;
+      return `${this.pad(minutes)}:${this.pad(remainingSeconds)}`;
     },
     pad(num) {
       return num.toString().padStart(2, '0');
