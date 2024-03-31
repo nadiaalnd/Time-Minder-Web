@@ -211,7 +211,7 @@
           <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
             <div data-aos="fade-right" data-aos-delay="150" class="flex justify-center items-center">
               <div class="flex justify-center items-center">
-                <img :src="require('~/assets/img/cat_hello.png')" class="w-70 sm:w-60" alt="" />
+                <img :src="require('~/assets/img/cat_hello.svg')" class="w-70 sm:w-60" alt="" />
               </div>
             </div>
           </div>
