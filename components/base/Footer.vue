@@ -6,9 +6,9 @@
           class="md:w-full lg:w-full w-full sm:w-1/2 xl:w-fit flex flex-col sm:flex-row sm:px-6 py-6 sm:py-12 sm:space-x-10 sm:border-r-0 border-[#DDDDDD]"
         >
           <div class="sm:hidden xl:block mb-6 sm:mb-0">
-            <a href="#">
+            <NuxtLink to="/">
               <img :src="require('~/assets/img/logo/TimeMinder.svg')" class="w-48 -mt-2" alt="Time Minder Logo" />
-            </a>
+            </NuxtLink>
           </div>
           <ul class="space-y-4">
             <NavLink name="Products" url="#" />
@@ -39,7 +39,7 @@
         >
           <h5 class="text-sm font-medium text-[#666666] focus:outline-none focus:shadow-outline">Newsletter</h5>
           <p class="text-sm text-[#666666] focus:outline-none focus:shadow-outline">
-            Dapatkan update terbaru dan promosi menarik langsung di inbox Anda.
+            Dapatkan update terbaru dan promosi menarik langsung di inbox kamu.
           </p>
           <div class="flex items-center space-x-2">
             <input

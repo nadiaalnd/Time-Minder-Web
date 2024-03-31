@@ -73,7 +73,7 @@
     </section>
 
     <!-- About Time Minder -->
-    <section class="relative pb-32 flex flex-col justify-center items-center">
+    <section class="relative pb-24 flex flex-col justify-center items-center">
       <div class="bg-white absolute h-[70%] w-full bottom-0"></div>
       <section
         id="about"
@@ -94,11 +94,11 @@
 
     <section class="bg-white">
       <!-- Intoduction section -->
-      <section class="w-full">
-        <BaseSection data-aos="fade-down" >
-          <div class=" col-span-12 lg:col-span-7">
-            <div class="w-full">
-              <img :src="require('assets/img/hero.png')" class="w-50" alt="" />
+      <section class="w-full" data-aos="fade-down">
+        <div class="relative max-w-screen-xl justify-center items-center px-8 mx-auto grid grid-cols-12 gap-x-6">
+          <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
+            <div class="flex justify-center items-center">
+              <img :src="require('assets/img/hero.png')" class="w-70 sm:w-65" alt="" />
             </div>
           </div>
           <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
@@ -113,10 +113,10 @@
               <LandingListItem title="Work-Break Ratio" />
             </ul>
           </div>
-        </BaseSection>
+        </div>
       </section>
 
-      <!-- Introduction section -->
+      <!-- Features section -->
       <section
         id="features"
         class="bg-features relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden"
@@ -127,24 +127,20 @@
             <h2 class="text-4xl font-semibold">Our <span class="text-time-gradient">Features</span></h2>
             <div class="space-y-2">
               <h4 class="text-lg font-medium">Add Your Own Custom Timer</h4>
-              <p class="paragraph text-sm xl:text-base">
-                Kustomisasi waktu belajar dan istirahat secara fleksibel sesuai dengan preferensi masing-masing. Kamu
-                dapat menyesuaikan durasi fokus dan istirahat, serta menetapkan interval antara sesi fokus dan
-                istirahat sesuai dengan kebutuhanmu.
+              <p class="paragraph text-justify text-sm xl:text-base">
+                Kustomisasi waktu belajar dan istirahat sesuai preferensimu. Atur durasi fokus dan istirahat serta interval sesuai kebutuhanmu.
               </p>
             </div>
             <div class="space-y-2">
               <h4 class="text-lg font-medium">Focus Timer</h4>
-              <p class="paragraph text-sm xl:text-base">
-                Fitur-fitur utama kami dirancang untuk memberikan pengalaman pengguna yang lebih baik dalam mengelola
-                waktu dan meningkatkan produktivitas.
+              <p class="paragraph text-justify text-sm xl:text-base">
+                Fitur-fitur utama kami dirancang untuk meningkatkan produktivitas dan pengelolaan waktu pengguna menjadi lebih baik.
               </p>
             </div>
             <div class="space-y-2">
               <h4 class="text-lg font-medium">List View Timer</h4>
-              <p class="paragraph text-sm xl:text-base">
-                Dengan tampilan list yang terstruktur, kamu dapat dengan mudah mengawasi waktu yang kamu habiskan pada
-                setiap tugas dan mengelola jadwalmu dengan lebih efisien.
+              <p class="paragraph text-justify text-sm xl:text-base">
+                Dengan tampilan list terstruktur, kamu dapat mengelola waktu untuk setiap tugas dan jadwalmu lebih efisien.
               </p>
             </div>
           </div>
@@ -160,25 +156,22 @@
               <img :src="require('~/assets/img/timer.png')" class="w-70" alt="" />
             </div>
           </div>
-          <div data-aos="fade-left" class="col-span-10 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
+          <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-4 xl:px-8">
             <h2 class="text-4xl font-semibold">Our Timer</h2>
             <ul class="space-y-8 sm:space-y-4">
-              <LandingListItem title="Timer yang Dapat Disesuaikan">
-                <p class="text-sm text-gray-700 leading-relaxed">
-                  Atur timer pribadi untuk sesi kerja dan istirahat, memungkinkan untuk menyesuaikan jadwalmu sesuai
-                  dengan preferensi dan alur kerja kamu yang unik.
+              <LandingListItem title="Customizable Timer">
+                <p class="text-justify text-sm text-gray-700 leading-relaxed">
+                  Atur timer pribadi untuk sesi kerja dan istirahat, sesuai dengan preferensi dan alur kerja unikmu.
                 </p>
               </LandingListItem>
               <LandingListItem title="Fokus dan Produktivitas">
-                <p class="text-sm text-gray-700 leading-relaxed">
-                  Tetap fokus dan produktif sepanjang hari dengan antarmuka intuitif Time Minder dan fitur-fitur canggih
-                  yang dirancang untuk meningkatkan produktivitasmu.
+                <p class="text-justify text-sm text-gray-700 leading-relaxed">
+                  Tetap fokus dan produktif sepanjang hari dengan antarmuka intuitif Time Minder dan fitur-fitur canggih yang meningkatkan produktivitas.
                 </p>
               </LandingListItem>
-              <LandingListItem title="Kompatibilitas Antar-Platform">
-                <p class="text-sm text-gray-700 leading-relaxed">
-                  Akses Time Minder dengan lancar di berbagai perangkat dan platform, memastikanmu tetap terorganisir
-                  dan berada dalam jalur yang benar di mana pun kamu berada.
+              <LandingListItem title="Cross-Platform Compatibility">
+                <p class="text-justify text-sm text-gray-700 leading-relaxed">
+                  Akses Time Minder dengan mudah di semua perangkat untuk tetap terorganisir di mana pun kamu berada.
                 </p>
               </LandingListItem>
             </ul>
@@ -213,21 +206,23 @@
       </section>
 
       <!-- FAQ section -->
-      <section id="faq" class="w-full">
-        <BaseSection>
-          <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
-            <div class="w-full">
-              <img :src="require('~/assets/img/cat_hello.svg')" class="w-70" alt="" />
+      <section id="faq" class="w-full" data-aos="fade-down">
+        <div class="relative max-w-screen-xl justify-center items-center px-8 mx-auto grid grid-cols-12 gap-x-6">
+          <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
+            <div data-aos="fade-right" data-aos-delay="150" class="flex justify-center items-center">
+              <div class="flex justify-center items-center">
+                <img :src="require('~/assets/img/cat_hello.png')" class="w-70 sm:w-60" alt="" />
+              </div>
             </div>
           </div>
-          <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
+          <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-8">
             <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
             <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
             <ul class="shadow-box">
               <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
             </ul>
           </div>
-        </BaseSection>
+        </div>
       </section>
 
       <div class="w-full py-10 flex justify-center">

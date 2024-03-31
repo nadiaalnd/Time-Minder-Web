@@ -1,7 +1,7 @@
 <template>
   <div class="justify-center max-w-xl">
     <div class="relative h-2 bg-neutral-200 rounded-full">
-      <div class="absolute top-0 left-0 h-2 rounded-full gradient-bg" :style="{ width: (100 - percentages) + '%' }"></div>
+      <div class="absolute top-0 left-0 h-2 rounded-full" :class="{ 'gradient-bg': percentages > 0, 'bg-gray-300': percentages === 0 }" :style="{ width: (100 - percentages) + '%' }"></div>
     </div>
   </div>
 </template>
