@@ -6,7 +6,7 @@
           <button
             v-for="type in timerTypes"
             :key="type"
-            :class="{ 'bg-gradient-to-r from-yellow-500 to-yellow-300': timerType === type, 'bg-gradient-to-r from-gray-500 to-gray-300': timerType !== type }"
+            :class="{ 'bg-gradient-to-r from-yellow-500 to-yellow-300': timerType === type, 'bg-gray-300': timerType !== type }"
             class="mr-4 px-4 py-2 rounded-md text-white hover:shadow-md transition duration-300"
             @click="setTimer(type)"
           >

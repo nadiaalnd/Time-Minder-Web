@@ -21,7 +21,6 @@
           <NavLink name="About" url="#about" />
           <NavLink name="Features" url="#features" />
           <NavLink name="FAQ" url="#faq" />
-          <NavLink name="Others" url="#footer" />
         </ul>
       </div>
     </div>
