@@ -42,7 +42,7 @@ export default {
       this.playAudio()
     },
     playAudio() {
-      const audio = new Audio('https://file-examples.com/storage/fe17d655216606dd89d5226/2017/11/file_example_MP3_700KB.mp3')
+      const audio = new Audio('https://file-examples.com/storage/fef0ba8e7b660ad2093c8cd/2017/11/file_example_MP3_700KB.mp3')
       audio.play()
     }
   }

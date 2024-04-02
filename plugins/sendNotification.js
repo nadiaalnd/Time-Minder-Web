@@ -4,7 +4,7 @@
 //     console.error("Browser tidak mendukung notifikasi.");
 //     return;
 //   }
-//   Notification.requestPermission().then(function (permission) {
+//   Notification.reque  stPermission().then(function (permission) {
 //     if (permission === "granted") {
 //       if(title){
 //         console.log("log title", title);
