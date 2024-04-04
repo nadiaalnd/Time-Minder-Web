@@ -1,6 +1,6 @@
 export default {
   head: {
-    title: 'Time Minder',
+    title: 'TimeMinder',
     htmlAttrs: {
       lang: 'en',
     },

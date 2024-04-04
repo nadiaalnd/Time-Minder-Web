@@ -11,11 +11,11 @@
               class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10"
             >
               Optimize Your Time with <br />
-              <span class="text-time-gradient">Time </span>
+              <span class="text-time-gradient">Time</span>
               <span class="text-minder-gradient">Minder</span>
             </h1>
             <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
-              Time Minder membantu kamu agar bisa lebih fokus dan teratur dalam menyelesaikan seluruh tugasmu setiap hari.
+              TimeMinder membantu kamu agar bisa lebih fokus dan teratur dalam menyelesaikan seluruh tugasmu setiap hari.
             </p>
             <div
               data-aos="fade-up"
@@ -84,8 +84,8 @@
             About <span class="text-time-gradient">Time </span> <span class="text-minder-gradient">Minder</span>
           </h2>
           <p data-aos="fade-up" class="paragraph text-center sm:text-left mr-10 mt-4 sm:mt-6">
-            Time Minder adalah aplikasi yang didesain untuk membantu siapapun mengelola waktu mereka secara efisien guna
-            meningkatkan produktivitas. Dengan antarmuka yang intuitif dan fitur yang dapat disesuaikan, Time Minder
+            TimeMinder adalah aplikasi yang didesain untuk membantu siapapun mengelola waktu mereka secara efisien guna
+            meningkatkan produktivitas. Dengan antarmuka yang intuitif dan fitur yang dapat disesuaikan, TimeMinder
             memungkinkan pengguna untuk mengatur sesi kerja dan istirahat sesuai dengan preferensi mereka.
           </p>
         </div>
@@ -166,12 +166,12 @@
               </LandingListItem>
               <LandingListItem title="Fokus dan Produktivitas">
                 <p class="text-justify text-sm text-gray-700 leading-relaxed">
-                  Tetap fokus dan produktif sepanjang hari dengan antarmuka intuitif Time Minder dan fitur-fitur canggih yang meningkatkan produktivitas.
+                  Tetap fokus dan produktif sepanjang hari dengan antarmuka intuitif TimeMinder dan fitur-fitur canggih yang meningkatkan produktivitas.
                 </p>
               </LandingListItem>
               <LandingListItem title="Cross-Platform Compatibility">
                 <p class="text-justify text-sm text-gray-700 leading-relaxed">
-                  Akses Time Minder dengan mudah di semua perangkat untuk tetap terorganisir di mana pun kamu berada.
+                  Akses TimeMinder dengan mudah di semua perangkat untuk tetap terorganisir di mana pun kamu berada.
                 </p>
               </LandingListItem>
             </ul>
@@ -255,24 +255,24 @@ export default {
       dropdownCrypto: false,
       accordions: [
         {
-          title: 'Apa itu Time Minder?',
+          title: 'Apa itu TimeMinder?',
           description:
-            'Time Minder adalah sebuah aplikasi timer yang dirancang khusus untuk membantu kamu meningkatkan fokus dan produktivitasmu. Dengan fitur-fitur kustomisasi untuk istirahat, Time Minder membantu kamu mengatur waktu kerja dan istirahat secara optimal, sehingga kamu dapat bekerja dengan lebih efisien.',
+            'TimeMinder adalah sebuah aplikasi timer yang dirancang khusus untuk membantu kamu meningkatkan fokus dan produktivitasmu. Dengan fitur-fitur kustomisasi untuk istirahat, TimeMinder membantu kamu mengatur waktu kerja dan istirahat secara optimal, sehingga kamu dapat bekerja dengan lebih efisien.',
         },
         {
-          title: 'Apa saja fitur utama yang ditawarkan oleh Time Minder?',
+          title: 'Apa saja fitur utama yang ditawarkan oleh TimeMinder?',
           description:
-            'Time Minder menawarkan fitur utama berupa timer kustomisasi yang memungkinkan kamu mengatur periode kerja dan istirahat sesuai kebutuhanmu. Kamu dapat menyesuaikan durasi istirahat, mengatur interval antara periode kerja dan istirahat, serta menentukan jumlah siklus kerja-istirahat yang diinginkan.',
+            'TimeMinder menawarkan fitur utama berupa timer kustomisasi yang memungkinkan kamu mengatur periode kerja dan istirahat sesuai kebutuhanmu. Kamu dapat menyesuaikan durasi istirahat, mengatur interval antara periode kerja dan istirahat, serta menentukan jumlah siklus kerja-istirahat yang diinginkan.',
         },
         {
-          title: 'Mengapa saya harus menggunakan Time Minder daripada aplikasi timer lainnya?',
+          title: 'Mengapa saya harus menggunakan TimeMinder daripada aplikasi timer lainnya?',
           description:
-            'Time Minder dirancang khusus untuk membantu kamu meningkatkan fokus dan produktivitas dengan pendekatan yang terbukti efektif. Dengan fitur-fitur kustomisasi untuk istirahat, Time Minder memungkinkan kamu untuk mengatur pola kerja yang sesuai dengan ritme dan preferensimu, sehingga dapat tetap fokus dan terorganisir sepanjang hari.',
+            'TimeMinder dirancang khusus untuk membantu kamu meningkatkan fokus dan produktivitas dengan pendekatan yang terbukti efektif. Dengan fitur-fitur kustomisasi untuk istirahat, TimeMinder memungkinkan kamu untuk mengatur pola kerja yang sesuai dengan ritme dan preferensimu, sehingga dapat tetap fokus dan terorganisir sepanjang hari.',
         },
         {
-          title: 'Bagaimana Time Minder dapat membantu saya secara konkret?',
+          title: 'Bagaimana TimeMinder dapat membantu saya secara konkret?',
           description:
-            'Time Minder membantu meningkatkan produktivitas dengan memberikan kontrol yang lebih besar atas waktu kerja dan istirahat. Dengan fitur yang memungkinkan pengaturan timer yang dapat digunakan kembali, kamu dapat mengatur pola kerjamu sekali dan menggunakannya berkali-kali tanpa perlu menambahkannya lagi. Hal ini membantumu tetap fokus dan terorganisir, sehingga dapat mencapai hasil yang lebih baik dalam waktu yang lebih singkat.',
+            'TimeMinder membantu meningkatkan produktivitas dengan memberikan kontrol yang lebih besar atas waktu kerja dan istirahat. Dengan fitur yang memungkinkan pengaturan timer yang dapat digunakan kembali, kamu dapat mengatur pola kerjamu sekali dan menggunakannya berkali-kali tanpa perlu menambahkannya lagi. Hal ini membantumu tetap fokus dan terorganisir, sehingga dapat mencapai hasil yang lebih baik dalam waktu yang lebih singkat.',
         },
       ],
       steps: [
