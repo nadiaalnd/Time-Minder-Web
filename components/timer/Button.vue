@@ -6,7 +6,7 @@
       class="bg-[#EFF5FB] px-4 py-4 sm:py-3 rounded-md text-[#59A7F2] hover:shadow-md transition duration-300"
       @click="startTimer"
     >
-      <slot>Start</slot>
+      <slot>{{ text }}</slot>
     </button>
     <!-- Button Pause Timer -->
     <button
@@ -34,9 +34,15 @@
 <script>
 export default {
   name: 'TimerButton',
+  props: {
+    text: {
+      type: String,
+      default: 'Start',
+    }
+  },
   data() {
     return {
-      timerStarted: false
+      timerStarted: false,
     };
   },
   methods: {

@@ -17,34 +17,40 @@
         <div class="text-8xl font-bold text-center mb-4">{{ timer }}</div>
         <!-- Button -->
         <div class="mb-4 flex justify-center">
-          <TimerButton
-            v-if="!timerStarted"
-            @startTimer="startTimer"
-          />
-          <TimerButton
-            v-if="timerStarted"
-            @pauseTimer="pauseTimer"
-            @finishTimer="finishTimer"
-          />
+          <div v-if="!timerStarted">
+            <TimerButton
+              :text="textButton"
+              @startTimer="startTimer"/>
+          </div>
+          <div v-else>
+            <TimerButton
+              @pauseTimer="pauseTimer"
+              @finishTimer="finishTimer"/>
+          </div>
+<!--          <TimerButton-->
+<!--            v-if="!timerStarted"-->
+<!--            :text="textButton"-->
+<!--            @startTimer="startTimer"-->
+<!--          />-->
+<!--          <TimerButton-->
+<!--            v-else-->
+<!--            @pauseTimer="pauseTimer"-->
+<!--            @finishTimer="finishTimer"-->
+<!--          />-->
         </div>
       </div>
     </div>
   </div>
 </template>
 
-
 <script>
 import TimerButton from '~/components/timer/Button.vue';
 import Timer from "@/plugins/timer";
-import {
-  sendNotification
-} from "@/plugins/sendNotification";
+import {sendNotification} from "@/plugins/sendNotification";
 
 export default {
   name: 'TimerView',
-  components: {
-    TimerButton
-  },
+  components: {TimerButton},
   data() {
     return {
       timerStarted: false,
@@ -53,20 +59,22 @@ export default {
       progress: 0,
       timerType: 'short',
       timerTypes: ['short', 'long'],
-      isPaused: false
+      isPaused: false,
+      textButton: 'Start',
+      time: {short: 5 * 60, long: 15 * 60}
     };
   },
   created() {
-    this.timer = this.formatTime(this.timerType === 'short' ? 5 * 60 : 15 * 60);
+    this.timer = this.formatTime(this.time[this.timerType]);
   },
   methods: {
     startTimer() {
-      if(this.isPaused) {
+      if (this.isPaused) {
         this.continueTimer();
         this.isPaused = false;
         return;
       }
-      const duration = this.timerType === 'short' ? 5 * 60 : 15 * 60;
+      const duration = this.time[this.timerType];
       this.timer = this.formatTime(duration);
       this.countdown = Timer(duration, this.finishTimer.bind(this));
       this.countdown.start();
@@ -83,16 +91,18 @@ export default {
       if (this.countdown) {
         this.countdown.stop();
       }
+      this.textButton = 'Continue';
       this.timerStarted = false;
       this.isPaused = true;
     },
-
-    finishTimer() {
+    finishTimer(isReset = false) {
       this.timerStarted = false;
       this.countdown = null;
-      this.timer = this.formatTime(this.timerType === 'short' ? 5 * 60 : 15 * 60);
+      this.timer = this.formatTime(this.time[this.timerType]);
       this.$emit('finishTimer');
-      this.runSendNotification();
+      if (!isReset) {
+        this.runSendNotification();
+      }
     },
     runSendNotification() {
       sendNotification("Time's up!", {
@@ -105,9 +115,7 @@ export default {
           const seconds = this.countdown.duration % 60;
           const minutes = Math.floor((this.countdown.duration / 60) % 60);
           this.timer = `${this.pad(minutes)}:${this.pad(seconds)}`;
-          this.progress = parseFloat((this.countdown.duration / (this.timerType === 'short' ? 5 * 60 : 15 * 60) * 100).toFixed(2));
-          // eslint-disable-next-line no-console
-          console.log("progress", this.progress);
+          this.progress = parseFloat((this.countdown.duration / this.time[this.timerType] * 100).toFixed(2));
           this.$emit('progress', this.progress);
         }
       }, 1000);
@@ -121,12 +129,14 @@ export default {
       return num.toString().padStart(2, '0');
     },
     setTimer(type) {
-      if(this.timerStarted) {
-        this.finishTimer();
+      if (this.isPaused || this.timerStarted) {
+        this.finishTimer(true);
       }
+      this.timerStarted = false;
       this.timerType = type;
-      const duration = this.timerType === 'short' ? 5 * 60 : 15 * 60;
-      this.timer = this.formatTime(duration);
+      console.log(this.timerStarted)
+      this.textButton = 'Start';
+      this.timer = this.formatTime(this.time[type]);
     }
   }
 }
