@@ -1,21 +1,4 @@
-# Time Minder Landing Page
-
-## Project Structure
-.  
-├── assets  
-│ ├── css  
-│ └── img  
-├── components  
-│ └── base  
-├── layouts  
-├── mixins  
-├── pages  
-├── plugins  
-├── static  
-├── README.md  
-├── nuxt.config.js  
-├── package.json  
-└── tailwind.config.js  
+# Time Minder Official Website
 
 ## Getting Started
 
