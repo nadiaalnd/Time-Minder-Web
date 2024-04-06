@@ -4,10 +4,11 @@
       <Popup :show="showAlert" @close="closeAlert"/>
       <div class="max-w-full py-8 sm:px-4">
         <TimerProgressBar
+          :bg-colors="typeBg"
           :percentages="percentages"
           class="sm:mx-auto px-4 sm:px-6 pb-2 sm:py-8"/>
         <div class="sm:mx-auto sm:px-6">
-          <TimerView @progress="handleProgress" @finishTimer="handleFinish"/>
+          <TimerView @progress="handleProgress" @finishTimer="handleFinish" @pauseTimer="pauseTimerHandler" @continueTimer="continueTimerHandler" @resetProgressBar="handleResetProgressBar"/>
         </div>
         <div class="mt-10 sm:mx-auto sm:px-6">
           <TimerAdd class="mt-4"/>
@@ -42,6 +43,8 @@ export default {
       percentages: 0,
       showAlert: false,
       audio: null,
+      listTypeBg: ['running-bg', 'paused-bg'],
+      typeBg: 'running-bg',
     }
   },
   mounted() {
@@ -49,6 +52,15 @@ export default {
     this.audio = new Audio('https://file-examples.com/storage/fe0e2ce82f660c1579f31b4/2017/11/file_example_MP3_700KB.mp3');
   },
   methods: {
+    pauseTimerHandler() {
+      this.typeBg = this.listTypeBg[1];
+    },
+    handleResetProgressBar() {
+      this.percentages = 0;
+    },
+    continueTimerHandler() {
+      this.typeBg = this.listTypeBg[0];
+    },
     handleProgress(progress) {
       this.percentages = progress;
     },
@@ -61,6 +73,7 @@ export default {
         this.audio.pause();
         this.audio.currentTime = 0;
       }
+      this.percentages = 0;
       this.showAlert = false;
     },
     playAudio() {
