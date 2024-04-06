@@ -61,7 +61,7 @@ export default {
       timerTypes: ['short', 'long'],
       isPaused: false,
       textButton: 'Start',
-      time: {short: 0.1 * 60, long: 15 * 60}
+      time: {short: 5 * 60, long: 15 * 60}
     };
   },
   created() {
