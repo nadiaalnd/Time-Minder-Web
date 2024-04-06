@@ -9,6 +9,9 @@
         <div class="sm:mx-auto sm:px-6">
           <TimerView @progress="handleProgress" @finishTimer="handleFinish"/>
         </div>
+        <div class="mt-10 sm:mx-auto sm:px-6">
+          <TimerAdd class="mt-4"/>
+        </div>
       </div>
     </section>
   </div>
@@ -19,6 +22,7 @@ import aosMixin from '@/mixins/aos'
 import TimerProgressBar from '@/components/timer/ProgressBar.vue'
 import TimerView from '@/components/timer/View.vue'
 import Popup from "@/components/timer/Popup.vue";
+import TimerAdd from "@/components/timer/Add.vue";
 import {
   requestPermission,
 } from '@/plugins/sendNotification'
@@ -28,6 +32,7 @@ export default {
   components: {
     TimerProgressBar,
     TimerView,
+    TimerAdd,
     Popup,
   },
   mixins: [aosMixin],
