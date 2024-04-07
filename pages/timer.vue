@@ -1,17 +1,17 @@
 <template>
   <div class="w-full mx-auto">
-    <section class="sm:mx-4 flex justify-center items-center">
+    <section class="flex justify-center items-center">
       <Popup :show="showAlert" @close="closeAlert"/>
-      <div class="max-w-full py-8 sm:px-4">
+      <div class="max-w-full py-8">
         <TimerProgressBar
           :bg-colors="typeBg"
           :percentages="percentages"
-          class="sm:mx-auto px-4 sm:px-6 pb-2 sm:py-8"/>
-        <div class="sm:mx-auto sm:px-6">
+          class="sm:mx-auto px-4 pb-2 sm:py-8"/>
+        <div class="w-full mx-auto">
           <TimerView @progress="handleProgress" @finishTimer="handleFinish" @pauseTimer="pauseTimerHandler" @continueTimer="continueTimerHandler" @resetProgressBar="handleResetProgressBar"/>
         </div>
         <div class="mt-10 sm:mx-auto sm:px-6">
-          <TimerAdd class="mt-4"/>
+          <TimerAdd class="mt-4 px-4"/>
         </div>
       </div>
     </section>

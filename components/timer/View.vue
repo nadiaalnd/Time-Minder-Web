@@ -1,6 +1,6 @@
 <template>
   <div class="w-full mx-auto">
-    <div class="w-screen max-w-lg mx-auto">
+    <div class="w-full max-w-lg mx-auto">
       <div class="bg-features relative p-8 shadow-lg rounded-lg">
         <div class="mb-4 flex justify-center">
           <button
@@ -166,7 +166,7 @@ export default {
 <style scoped>
 .bg-features {
   background: url('assets/img/bg-section.webp');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 </style>
