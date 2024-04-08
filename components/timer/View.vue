@@ -1,7 +1,7 @@
 <template>
   <div class="w-full mx-auto">
     <div class="w-full max-w-lg mx-auto">
-      <div class="bg-features relative p-8 shadow-lg rounded-lg">
+      <div class="bg-features relative shadow-lg rounded-lg p-8 md:bg-auto lg:bg-cover xl:bg-contain bg-center bg-no-repeat md:h-400 lg:h-500 xl:h-500 md:w-500 lg:w-600 xl:w-600 md:p-20 lg:p-30 xl:p-20">
         <div class="mb-4 flex justify-center">
           <button
             v-for="type in timerTypes"
@@ -165,7 +165,7 @@ export default {
 
 <style scoped>
 .bg-features {
-  background: url('assets/img/bg-section.webp');
+  background: url('assets/img/bg-section-timer.png');
   background-size: contain;
   background-position: center;
 }

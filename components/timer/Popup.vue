@@ -6,7 +6,7 @@
       <!-- Konten Modal -->
       <div class="relative bg-white rounded-lg shadow">
         <!-- Header Modal -->
-        <div class="flex items-center justify-between md:p-5 rounded-t dark:border-gray-600">
+        <div class="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
           <h3 class="text-xl font-semibold text-gray-900">
             Notification
           </h3>
@@ -18,16 +18,16 @@
           </button>
         </div>
         <!-- Isi Modal -->
-        <div class="pb-4 md:p-5 space-y-2 h-12">
+        <div class="p-4 md:p-5 space-y-2">
           <p class="text-gray-600 dark:text-gray-400">
             Sorry, your time is up. Please manage your time wisely for future tasks.
           </p>
         </div>
         <!-- Footer Modal -->
-        <div class="px-4 bg-gray-50 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+        <div class="px-4 bg-gray-50 py-3 sm:px-6 sm:flex sm:flex-row-reverse rounded-b">
           <button
             type="button"
-            class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-yellow-500 text-base font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:ml-3 sm:w-auto sm:text-sm"
+            class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-yellow-500 text-base font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:w-auto sm:text-sm"
             @click="$emit('close')">
             Close
           </button>

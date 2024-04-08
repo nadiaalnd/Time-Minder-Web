@@ -6,7 +6,7 @@
         <TimerProgressBar
           :bg-colors="typeBg"
           :percentages="percentages"
-          class="sm:mx-auto px-4 pb-2 sm:py-8"/>
+          class="sm:mx-auto px-4 pb-2 mb-2 sm:py-8"/>
         <div class="w-full mx-auto">
           <TimerView @progress="handleProgress" @finishTimer="handleFinish" @pauseTimer="pauseTimerHandler" @continueTimer="continueTimerHandler" @resetProgressBar="handleResetProgressBar"/>
         </div>

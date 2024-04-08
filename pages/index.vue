@@ -121,7 +121,7 @@
         id="features"
         class="bg-features relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden"
       >
-        <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
+        <div class="relative max-w-full-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
           <HomepageImage class="sm:hidden" />
           <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
             <h2 class="text-4xl font-semibold">Our <span class="text-time-gradient">Features</span></h2>
@@ -180,7 +180,7 @@
       </section>
 
       <!-- Getting started section -->
-      <section class="bg-features relative max-w-screen-xl my-24 mx-auto shadow sm:rounded-2xl overflow-hidden">
+      <section class="bg-features relative max-w-full-xl my-24 mx-auto shadow sm:rounded-2xl overflow-hidden">
         <div class="w-full py-16 flex flex-col items-center">
           <h2 data-aos="flip-down" class="text-3xl sm:text-4xl font-semibold text-center">
             Ayo Coba <span class="text-time-gradient">Time </span>
