@@ -2,7 +2,7 @@
   <div class="relative justify-center items-center">
     <!-- Button Pause Timer -->
     <button
-      class="bg-[#EFF5FB] px-4 py-4 sm:py-3 rounded-md text-[#59A7F2] hover:shadow-md transition duration-300"
+      class="bg-blue-100 px-4 py-4 sm:py-3 rounded-md text-[#59A7F2] hover:shadow-md transition duration-300"
       @click="handleButtonClick"
     >
       <slot></slot>

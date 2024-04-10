@@ -10,11 +10,11 @@
             class="mr-4 px-4 py-2 rounded-md text-white hover:shadow-md transition duration-300"
             @click="triggerModal(type)"
           >
-            {{ type === 'short' ? 'Short Break' : 'Long Break' }}
+            {{ type === 'short' ? 'Short Timer' : 'Long Timer' }}
           </button>
         </div>
         <!-- Timer -->
-        <div class="text-8xl font-bold text-center mb-4">{{ timer }}</div>
+        <div :class="{'text-red-600': isPaused}" class="text-8xl font-bold text-center mb-4">{{ timer }}</div>
         <!-- Button -->
         <div class="mb-4 flex justify-center">
           <div v-if="!timerStarted">
@@ -112,7 +112,7 @@ export default {
     },
     runSendNotification() {
       sendNotification("Time's up!", {
-        body: `Your ${this.timerType === 'short' ? 'short break' : 'long break'} is over!`
+        body: `Your ${this.timerType === 'short' ? 'short focus' : 'long focus'} is over!`
       });
     },
     updateTimer() {
