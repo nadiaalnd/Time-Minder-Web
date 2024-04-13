@@ -13,7 +13,7 @@
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
               <div class="items-center justify-center mt-2">
                 <p class="text-sm text-center text-gray-500">
-                  <a href="https://drive.google.com/file/d/1QJURZqptwCRqUaGcNa-c46HsnqHny0S5/view?usp=sharing" target="_blank">Download</a>
+                  <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" target="_blank">Download</a>
                   aplikasi TimeMinder untuk mendapatkan lebih banyak fitur dan pengalaman yang lebih baik.
                 </p>
               </div>
