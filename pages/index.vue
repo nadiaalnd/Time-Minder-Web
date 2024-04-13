@@ -80,8 +80,8 @@
         class="z-[5] max-w-screen-xl mx-8 sm:mx-auto px-4 sm:px-6 lg:px-0 py-4 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md"
       >
         <div class="pl-12">
-          <h2 class="text-4xl font-semibold">
-            About <span class="text-time-gradient">Time </span> <span class="text-minder-gradient">Minder</span>
+          <h2 class="text-4xl justify-center items-center font-semibold">
+            About <span class="text-time-gradient"> Time </span> <span class="text-minder-gradient">Minder</span>
           </h2>
           <p data-aos="fade-up" class="paragraph text-center sm:text-left mr-10 mt-4 sm:mt-6">
             TimeMinder adalah aplikasi yang didesain untuk membantu siapapun mengelola waktu mereka secara efisien guna
@@ -300,6 +300,10 @@ export default {
 }
 </script>
 <style scoped>
+#about {
+  padding-top: 50px;
+}
+
 .text-time-gradient {
   background: rgb(255, 191, 28);
   background: linear-gradient(169.4deg, #ffbf1c -6.01%, #ffb700 36.87%, #f8f097 78.04%, #ffbf1c 103.77%);
