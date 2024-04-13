@@ -128,7 +128,7 @@
             <div class="space-y-2">
               <h4 class="text-lg font-medium">Add Your Own Custom Timer</h4>
               <p class="paragraph text-justify text-sm xl:text-base">
-                Kustomisasi waktu belajar dan istirahat sesuai preferensimu. Atur durasi fokus dan istirahat serta interval sesuai kebutuhanmu.
+                Kustomisasi waktu fokus dan istirahat sesuai preferensimu. Atur durasi fokus dan istirahat serta interval sesuai kebutuhanmu.
               </p>
             </div>
             <div class="space-y-2">
