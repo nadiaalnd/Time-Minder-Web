@@ -13,7 +13,8 @@
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
               <div class="items-center justify-center mt-2">
                 <p class="text-sm text-center text-gray-500">
-                  Download aplikasi TimeMinder untuk mendapatkan lebih banyak fitur dan pengalaman yang lebih baik.
+                  <a href="https://drive.google.com/file/d/1QJURZqptwCRqUaGcNa-c46HsnqHny0S5/view?usp=sharing" target="_blank">Download</a>
+                  aplikasi TimeMinder untuk mendapatkan lebih banyak fitur dan pengalaman yang lebih baik.
                 </p>
               </div>
             </div>

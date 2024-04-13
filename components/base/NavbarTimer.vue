@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{ 'bg-white shadow-lg' : isScrolled }" class="relative z-10 w-full text-neutral-800 justify-between">
+  <nav :class="{ 'cover-gradient-2' : isScrolled }" class="relative z-10 w-full text-neutral-800 justify-between">
     <div class="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row py-2">
       <div class="flex flex-col lg:flex-row space-x-4 xl:space-x-2">
         <div class="w-full flex flex-row items-center justify-between py-2">
@@ -55,7 +55,17 @@ export default {
   }
 }
 </script>
+
 <style scoped>
+.cover-gradient-2 {
+  background: linear-gradient(
+    169.4deg,
+    rgb(255, 249, 229) -6.01%,
+    rgb(255, 249, 229) 36.87%,
+    rgb(255, 249, 229) 78.04%,
+    rgb(255, 249, 229) 103.77%
+  );
+}
 .text-time-gradient {
   background: rgb(255, 191, 28);
   background: linear-gradient(169.4deg, #ffbf1c -6.01%, #ffb700 36.87%, #f8f097 78.04%, #ffbf1c 103.77%);
