@@ -26,21 +26,23 @@ export default {
     scrollToElement(event) {
       const targetElement = document.getElementById(this.url.substring(1));
       if (targetElement) {
-        let headerOffset = 100;
-        if(targetElement.id === 'faq') {
+        // Hitung tinggi header
+        const headerHeight = document.getElementById('about').offsetHeight;
+        let headerOffset = headerHeight;
+
+        if (targetElement.id === 'faq') {
           headerOffset = -50;
         }
+
         const elementPosition = targetElement.getBoundingClientRect().top;
+
         const offsetPosition = elementPosition - headerOffset;
 
-        const paddingHeight = 120;
-
-        const finalOffsetPosition = offsetPosition - paddingHeight;
-
         window.scrollTo({
-          top: finalOffsetPosition,
+          top: offsetPosition,
           behavior: 'smooth',
         });
+
         event.stopPropagation();
         event.preventDefault();
       }

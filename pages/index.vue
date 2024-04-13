@@ -300,10 +300,6 @@ export default {
 }
 </script>
 <style scoped>
-#about {
-  padding-top: 50px;
-}
-
 .text-time-gradient {
   background: rgb(255, 191, 28);
   background: linear-gradient(169.4deg, #ffbf1c -6.01%, #ffb700 36.87%, #f8f097 78.04%, #ffbf1c 103.77%);
