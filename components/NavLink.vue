@@ -3,8 +3,9 @@
     <NuxtLink
       class="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline"
       :to="url"
+      @click.prevent="scrollToElement"
     >
-      <a @click.prevent="scrollToElement">{{ name }}</a>
+      {{ name }}
     </NuxtLink>
   </li>
 </template>
@@ -22,10 +23,10 @@ export default {
     },
   },
   methods: {
-    scrollToElement() {
+    scrollToElement(event) {
       const targetElement = document.getElementById(this.url.substring(1));
       if (targetElement) {
-        let headerOffset = 100;
+        let headerOffset = 50;
         if(targetElement.id === 'faq') {
           headerOffset = -50;
         }
@@ -36,6 +37,8 @@ export default {
           top: offsetPosition,
           behavior: 'smooth',
         });
+        event.stopPropagation();
+        event.preventDefault();
       }
     }
   }

@@ -18,7 +18,7 @@
           class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
         >
           <NuxtLink to="/">Home</NuxtLink>
-          <NavLink name="Download" url="#" />
+          <a href="https://drive.google.com/file/d/1QJURZqptwCRqUaGcNa-c46HsnqHny0S5/view?usp=sharing" target="_blank">Download</a>
         </ul>
       </div>
     </div>
@@ -26,12 +26,8 @@
 </template>
 
 <script>
-import NavLink from "@/components/NavLink.vue";
 export default {
   name: 'BaseNavbarTimer',
-  components: {
-    NavLink
-  },
   data() {
     return {
       open: false,

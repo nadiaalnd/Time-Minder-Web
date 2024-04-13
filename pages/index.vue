@@ -29,7 +29,7 @@
               <BaseButton
                 class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center"
               >
-                <h4>Download App</h4>
+                <a href="https://drive.google.com/file/d/1QJURZqptwCRqUaGcNa-c46HsnqHny0S5/view?usp=sharing" target="_blank">Download Apps</a>
               </BaseButton>
             </div>
           </div>
