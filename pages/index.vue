@@ -24,7 +24,7 @@
               class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-4"
             >
               <BaseButton class="max-w-full px-8 py-4 bg-gradient-to-r from-[#FFBF1C] to-[#F8F097] text-white">
-                <NuxtLink to="/timer">Get Started</NuxtLink>
+               <a href="https://www.timeminder.my.id/timer">Get Started</a>
               </BaseButton>
               <BaseButton
                 class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center"
