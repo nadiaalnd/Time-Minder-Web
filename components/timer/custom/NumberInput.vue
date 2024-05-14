@@ -6,7 +6,6 @@
       <input v-model.number="inputValue" @input="$emit('update:modelValue', inputValue)" type="number" class="h-10 block w-full text-center shadow-sm sm:text-sm bg-[#FAF8EE] border-t border-b border-yellow-500">
       <button @click="increase" class="h-10 flex items-center justify-center px-2 py-1 bg-[#FAF8EE] border-t border-b border-r border-yellow-500 border-l-white rounded-r-md">+</button>
     </div>
-
   </div>
 </template>
 
