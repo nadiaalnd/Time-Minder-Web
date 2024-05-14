@@ -29,7 +29,7 @@ export default {
     },
   },
   created() {
-    this.inputValue = parseInt(localStorage.getItem('customTime'));
+    this.inputValue = parseInt(localStorage.getItem('customTime') || 0);
   },
   methods: {
     increase() {

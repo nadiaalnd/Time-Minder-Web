@@ -38,7 +38,7 @@
               Edit
             </TimerButton>
           </div>
-          <ModalConfirm :show="isModalShow" @close="closeModal" @confirm="setTimer()"/>
+          <ModalConfirm :show="isModalShow" @close="modalInputClose" @confirm="setTimer()"/>
         </div>
       </div>
     </div>
