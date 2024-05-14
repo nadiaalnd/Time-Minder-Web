@@ -23,14 +23,18 @@
               data-aos-delay="700"
               class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-4"
             >
-              <BaseButton class="max-w-full px-8 py-4 bg-gradient-to-r from-[#FFBF1C] to-[#F8F097] text-white">
-               <a href="https://www.timeminder.my.id/timer">Get Started</a>
-              </BaseButton>
-              <BaseButton
-                class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center"
-              >
-                <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" target="_blank">Download Apps</a>
-              </BaseButton>
+              <nuxt-link to="/timer">
+                <BaseButton class="max-w-full px-8 py-4 bg-gradient-to-r from-[#FFBF1C] to-[#F8F097] text-white">
+                  Get Started
+                </BaseButton>
+              </nuxt-link>
+              <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" target="_blank">
+                <BaseButton
+                  class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center"
+                >
+                  Download Apps
+                </BaseButton>
+              </a>
             </div>
           </div>
           <div class="hidden sm:block col-span-12 lg:col-span-6">

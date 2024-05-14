@@ -49,7 +49,7 @@ export default {
   },
   mounted() {
     requestPermission();
-    this.audio = new Audio('https://file-examples.com/storage/fe0e2ce82f660c1579f31b4/2017/11/file_example_MP3_700KB.mp3');
+    this.audio = new Audio('https://backoffice.planduit.my.id/bell.mp3');
   },
   methods: {
     pauseTimerHandler() {
