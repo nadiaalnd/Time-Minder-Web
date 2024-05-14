@@ -1,6 +1,6 @@
 <template>
   <button
-    class="text-sm text-center rounded-full hover:shadow-md hover:shadow-[#FFBF1C]/50 transition duration-300"
+    class="text-sm text-center rounded-full hover:shadow-md hover:shadow-[#FFFFF]/50 transition duration-300"
   >
     <slot></slot>
   </button>

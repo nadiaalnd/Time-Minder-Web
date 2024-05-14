@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ModalDownload from './ModalDownload.vue';
+import ModalDownload from './custom/ModalCustom.vue';
 
 export default {
   name: 'TimerAdd',

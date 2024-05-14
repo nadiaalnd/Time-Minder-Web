@@ -1,0 +1,41 @@
+<template>
+  <div class="mt-2">
+    <label class="block text-sm font-medium text-gray-700">{{ label }}</label>
+    <div class="flex items-center">
+      <button @click="decrease" class="h-10 flex items-center justify-center px-2 py-1 bg-[#FAF8EE] border-t border-b border-l border-yellow-500 border-r-white rounded-l-md">-</button>
+      <input v-model.number="inputValue" @input="$emit('update:modelValue', inputValue)" type="number" class="h-10 block w-16 text-center shadow-sm sm:text-sm bg-[#FAF8EE] border-t border-b border-yellow-500">
+      <button @click="increase" class="h-10 flex items-center justify-center px-2 py-1 bg-[#FAF8EE] border-t border-b border-r border-yellow-500 border-l-white rounded-r-md">+</button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    label: String,
+    modelValue: Number,
+  },
+  data() {
+    return {
+      inputValue: this.modelValue,
+    };
+  },
+  watch: {
+    modelValue(newValue) {
+      this.inputValue = newValue;
+    },
+  },
+  methods: {
+    increase() {
+      this.inputValue++;
+      this.$emit('update:modelValue', this.inputValue);
+    },
+    decrease() {
+      if (this.inputValue > 0) {
+        this.inputValue--;
+        this.$emit('update:modelValue', this.inputValue);
+      }
+    },
+  },
+};
+</script>
