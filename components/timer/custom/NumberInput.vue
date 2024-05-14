@@ -13,7 +13,10 @@
 export default {
   props: {
     label: String,
-    modelValue: Number,
+    modelValue: {
+      type: Number,
+      default: 0,
+    }
   },
   data() {
     return {
@@ -24,6 +27,9 @@ export default {
     modelValue(newValue) {
       this.inputValue = newValue;
     },
+  },
+  created() {
+    this.inputValue = parseInt(localStorage.getItem('customTime'));
   },
   methods: {
     increase() {

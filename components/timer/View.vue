@@ -10,8 +10,9 @@
             class="mr-4 px-4 py-2 rounded-md text-white hover:shadow-md transition duration-300"
             @click="triggerModal(type)"
           >
-            {{ type === 'short' ? 'Short Timer' : 'Long Timer' }}
+            {{ getName(timerTypes.indexOf(type)) }}
           </button>
+          <ModalDownload v-if="isModalOpen" @close="modalInputClose" />
         </div>
         <!-- Timer -->
         <div :class="{'text-red-600': isPaused}" class="text-8xl font-bold text-center mb-4">{{ timer }}</div>
@@ -32,6 +33,11 @@
               </TimerButton>
             </div>
           </div>
+          <div class="ml-4">
+            <TimerButton :onClick="triggerShowCustomModal" v-if="timerType === 'custom'">
+              Edit
+            </TimerButton>
+          </div>
           <ModalConfirm :show="isModalShow" @close="closeModal" @confirm="setTimer()"/>
         </div>
       </div>
@@ -40,6 +46,7 @@
 </template>
 
 <script>
+import ModalDownload from "./custom/ModalCustom.vue";
 import TimerButton from '~/components/timer/Button.vue';
 import ModalConfirm from "~/components/timer/ModalConfirm.vue";
 import IconFinish from "~/components/icon/Finish.vue";
@@ -49,7 +56,7 @@ import {sendNotification} from "@/plugins/sendNotification";
 
 export default {
   name: 'TimerView',
-  components: {TimerButton, ModalConfirm, IconFinish, IconPause},
+  components: {ModalDownload, TimerButton, ModalConfirm, IconFinish, IconPause},
   data() {
     return {
       timerStarted: false,
@@ -57,19 +64,35 @@ export default {
       countdown: null,
       progress: 0,
       timerType: 'short',
-      timerTypes: ['short', 'long'],
+      timerTypes: ['short', 'long', 'custom'],
       isPaused: false,
       textButton: 'Start',
-      time: {short: 5 * 60, long: 15 * 60},
+      time: {short: 5 * 60, long: 15 * 60, custom: 0},
       isModalShow: false,
       timerTypeTemp: '',
+      isModalOpen: false,
     };
   },
   created() {
     this.timer = this.formatTime(this.time[this.timerType]);
   },
+  mounted() {
+    this.time.custom = parseInt(localStorage.getItem('customTime') * 60) || 0;
+  },
   methods: {
+    getCustomTimer(){
+      const customTime = localStorage.getItem('customTime');
+      if (customTime) {
+        this.time.custom = parseInt(customTime * 60);
+      }else{
+        this.isModalOpen = true;
+      }
+    },
     startTimer() {
+      if(this.timerType === 'custom' && this.time.custom === 0){
+        this.isModalOpen = true;
+        return;
+      }
       if (this.isPaused) {
         this.$emit('continueTimer');
         this.continueTimer();
@@ -112,7 +135,7 @@ export default {
     },
     runSendNotification() {
       sendNotification("Time's up!", {
-        body: `Your ${this.timerType === 'short' ? 'short focus' : 'long focus'} is over!`
+        body: `Your (${this.getName(this.timerTypes.indexOf(this.timerType))}) timer has finished.`,
       });
     },
     updateTimer() {
@@ -141,6 +164,17 @@ export default {
       } else {
         this.setTimer();
       }
+      if(type === 'custom'){
+        this.getCustomTimer();
+      }
+    },
+    triggerShowCustomModal() {
+      this.isModalOpen = true;
+    },
+    modalInputClose() {
+      this.isModalOpen = false;
+      this.getCustomTimer();
+      this.setTimer();
     },
     closeModal() {
       this.isModalShow = false;
@@ -158,6 +192,10 @@ export default {
         this.textButton = 'Start';
         this.timer = this.formatTime(this.time[type]);
       }
+    },
+    getName(index){
+      const names = this.timerTypes[index];
+      return names.charAt(0).toUpperCase() + names.slice(1);
     }
   }
 }

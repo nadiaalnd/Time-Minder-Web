@@ -8,15 +8,15 @@
             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m8 8l32 32M8 40L40 8"/>
           </svg>
         </button>
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style="width: 500px">
           <h3 class="text-lg leading-6 font-medium text-gray-900">Tambah Waktumu Sendiri!</h3>
-          <FormInput />
+          <FormInput @update:time="handleTime($event)" />
         </div>
-        <div class="px-4 py-3 sm:px-6 flex justify-between">
-          <button @click="reset" class="w-1/2 border-2 hover:bg-gray-100 border-neutral-950 py-2 rounded-l-md">
-            Reset
-          </button>
-          <button @click="apply" class="w-1/2 bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-r-md">
+        <div class="px-4 py-3 sm:px-6 flex justify-center">
+<!--          <button @click="reset" class="w-1/2 border-2 hover:bg-gray-100 border-neutral-950 py-2 rounded-l-md">-->
+<!--            Reset-->
+<!--          </button>-->
+          <button class="w-1/2 bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-r-md" @click="apply">
             Terapkan
           </button>
         </div>
@@ -32,12 +32,24 @@ export default {
   components: {
     FormInput,
   },
+  data() {
+    return {
+      time: 0,
+    };
+  },
+  mounted() {
+    this.time = parseInt(localStorage.getItem('customTime'));
+  },
   methods: {
     apply() {
-      // Logika untuk menerapkan perubahan
+      localStorage.setItem('customTime', this.time);
+      this.$emit('close');
+    },
+    handleTime(time) {
+      this.time = time;
     },
     reset() {
-      // Logika untuk mereset form
+      this.time = 0;
     },
     close() {
       this.$emit('close');
