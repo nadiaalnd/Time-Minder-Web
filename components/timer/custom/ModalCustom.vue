@@ -13,10 +13,7 @@
           <FormInput @update:time="handleTime($event)" />
         </div>
         <div class="px-4 py-3 sm:px-6 flex justify-center">
-<!--          <button @click="reset" class="w-1/2 border-2 hover:bg-gray-100 border-neutral-950 py-2 rounded-l-md">-->
-<!--            Reset-->
-<!--          </button>-->
-          <button class="w-1/2 bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-r-md" @click="apply">
+          <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-md" @click="apply">
             Terapkan
           </button>
         </div>

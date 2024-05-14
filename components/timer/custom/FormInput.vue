@@ -1,13 +1,10 @@
 <template>
   <div>
-<!--    <InputField label="Nama Timer" v-model="name" @input="updateName" />-->
-<!--    <InputField label="Deskripsi Timer" v-model="description" @input="updateDescription" />-->
     <NumberInput label="Waktu (Dalam Menit)" v-model="time" @update:modelValue="updateTime" />
   </div>
 </template>
 
 <script>
-// import InputField from '@/components/timer/custom/InputField.vue';
 import NumberInput from '@/components/timer/custom/NumberInput.vue';
 export default {
   components: {
