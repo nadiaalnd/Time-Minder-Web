@@ -10,7 +10,7 @@
         </button>
         <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <h3 class="text-lg leading-6 font-medium text-gray-900">Tambah Waktumu Sendiri!</h3>
-          <FormInput @update:modelValue="handleTime" />
+          <FormInput @update:time="handleTime" />
         </div>
         <div class="px-4 py-3 sm:px-6 flex justify-center">
           <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-md" @click="apply">
