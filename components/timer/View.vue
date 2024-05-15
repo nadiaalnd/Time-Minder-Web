@@ -173,7 +173,10 @@ export default {
     },
     modalInputClose() {
       this.isModalOpen = false;
-      this.getCustomTimer();
+      const customTime = localStorage.getItem('customTime');
+      if (customTime) {
+        this.time.custom = parseInt(customTime * 60);
+      }
       this.setTimer();
     },
     closeModal() {
