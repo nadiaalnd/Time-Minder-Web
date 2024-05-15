@@ -23,15 +23,13 @@
               data-aos-delay="700"
               class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-4"
             >
-              <nuxt-link to="/timer">
-                <BaseButton class="max-w-full px-8 py-4 bg-gradient-to-r from-[#FFBF1C] to-[#F8F097] text-white">
+              <nuxt-link to="/timer" class="max-w-full px-8 py-4 rounded-3xl bg-gradient-to-r from-[#FFBF1C] to-[#F8F097] text-white">
+                <BaseButton>
                   Get Started
                 </BaseButton>
               </nuxt-link>
-              <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" target="_blank">
-                <BaseButton
-                  class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center"
-                >
+              <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" class="max-w-full px-6 py-4 rounded-3xl bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center" target="_blank">
+                <BaseButton>
                   Download Apps
                 </BaseButton>
               </a>
