@@ -96,8 +96,8 @@
       </section>
     </section>
 
+    <!-- Intoduction section -->
     <section class="bg-white">
-      <!-- Intoduction section -->
       <section class="w-full" data-aos="fade-down">
         <div class="relative max-w-screen-xl justify-center items-center px-8 mx-auto grid grid-cols-12 gap-x-6">
           <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
