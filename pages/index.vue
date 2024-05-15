@@ -28,6 +28,7 @@
                   Get Started
                 </BaseButton>
               </nuxt-link>
+
               <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" class="max-w-full px-6 py-4 rounded-3xl bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center" target="_blank">
                 <BaseButton>
                   Download Apps
