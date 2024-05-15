@@ -80,13 +80,14 @@
       <div class="bg-white absolute h-[70%] w-full bottom-0"></div>
       <section
         id="about"
-        class="z-[5] max-w-screen-xl mx-8 sm:mx-auto px-4 sm:px-6 lg:px-0 py-4 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md"
+        class="z-[5] max-w-screen-xl mx-8 sm:mx-auto px-4 sm:px-6 lg:px-0 py-4 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md flex flex-col items-center"
       >
-        <div class="pl-12">
-          <h2 class="text-4xl justify-center items-center font-semibold">
-            About <span class="text-time-gradient"> Time </span> <span class="text-minder-gradient">Minder</span>
+        <div class="text-center px-8 sm:px-12">
+          <h2 class="text-4xl font-semibold">
+            About
+            <span class="text-time-gradient">Time </span> <span class="text-minder-gradient">Minder</span>
           </h2>
-          <p data-aos="fade-up" class="paragraph text-center sm:text-left mr-10 mt-4 sm:mt-6">
+          <p data-aos="fade-up" class="paragraph text-about text-justify mt-4 sm:mt-6">
             TimeMinder adalah aplikasi yang didesain untuk membantu siapapun mengelola waktu mereka secara efisien guna
             meningkatkan produktivitas. Dengan antarmuka yang intuitif dan fitur yang dapat disesuaikan, TimeMinder
             memungkinkan pengguna untuk mengatur sesi kerja dan istirahat sesuai dengan preferensi mereka.
@@ -322,4 +323,9 @@ export default {
   background-size: cover;
   background-position: center;
 }
+
+.text-about {
+  text-align: justify;
+}
+
 </style>
