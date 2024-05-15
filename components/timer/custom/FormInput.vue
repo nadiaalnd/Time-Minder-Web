@@ -1,6 +1,9 @@
 <template>
   <div>
-    <NumberInput label="Waktu (Dalam Menit)" v-model="time" @update:modelValue="updateTime" />
+    <p class="text-xs">Input waktu maksimal hanya 59 menit. Ingin menjalankan timer lebih lama?
+      <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" class="text-yellow-500">Download</a> TimeMinder sekarang!
+    </p>
+    <NumberInput v-model="time" label="Waktu (Dalam Menit)" @update:modelValue="updateTime" />
   </div>
 </template>
 

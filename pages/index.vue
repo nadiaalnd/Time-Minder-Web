@@ -24,15 +24,15 @@
               class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-4"
             >
               <nuxt-link to="/timer" class="max-w-full px-8 py-4 rounded-3xl bg-gradient-to-r from-[#FFBF1C] to-[#F8F097] text-white">
-                <BaseButton>
+                <button>
                   Get Started
-                </BaseButton>
+                </button>
               </nuxt-link>
 
-              <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" class="max-w-full px-6 py-4 rounded-3xl bg-inherit text-gradient border border-[#FFBF1C] flex items-center justify-center" target="_blank">
-                <BaseButton>
+              <a href="https://play.google.com/store/apps/details?id=com.a3.time_minder" class="max-w-full px-6 py-4 rounded-3xl text-gradient border border-[#FFBF1C] flex items-center justify-center" target="_blank">
+                <button>
                   Download Apps
-                </BaseButton>
+                </button>
               </a>
             </div>
           </div>

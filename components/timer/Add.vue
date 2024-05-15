@@ -6,17 +6,17 @@
       @click="openModal">
       Add Timer
     </button>
-    <ModalDownload v-if="isModalOpen" @close="closeModal" />
+    <ModalCustom v-if="isModalOpen" @close="closeModal" />
   </div>
 </template>
 
 <script>
-import ModalDownload from './custom/ModalCustom.vue';
+import ModalCustom from './custom/ModalCustom.vue';
 
 export default {
   name: 'TimerAdd',
   components: {
-    ModalDownload,
+    ModalCustom,
   },
   layout: 'custom',
   data() {
