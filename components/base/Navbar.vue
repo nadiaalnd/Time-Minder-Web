@@ -62,7 +62,6 @@ export default {
 .cover-gradient-2 {
   background: rgb(239, 245, 251);
 }
-
 .glassmorph {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
